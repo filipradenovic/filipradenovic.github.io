@@ -55,33 +55,52 @@
 
 <img src="{{ user.avatar_url }}" class="circle mb-3" style="max-width: 150px;">
 <h1 class="{% if site.style == 'dark' %}text-white{% endif %} mb-2 lh-condensed">{{ user.name }}</h1>
-<p class="f4 mb-4 {% if site.style == 'dark' %}text-white{% else %}text-gray{% endif %}">
-  PhD Student
+<p class="f4 mb-2 {% if site.style == 'dark' %}text-white{% else %}text-gray{% endif %}">
+  PhD Student at <a href="http://cmp.felk.cvut.cz" {% if site.style == 'dark' %}class="text-white"{% endif %}>Center for Machine Perception</a>
 </p>
 
 {% if include.metadata %}
   <div class="f4 mb-6">
-    <!-- github -->
-    <div class="{{ metadata_styles }}">
-      {% octicon mark-github height:20 class:"mr-2 v-align-middle" fill:{{ icon_color }} aria-label:GitHub %}
-      <div class="mr-2 {% if site.style == 'dark' %}text-white{% else %}text-gray{% endif %}">GitHub:</div>
-      <a href="https://github.com/{{ user.login }}" {% if site.style == 'dark' %}class="text-white"{% endif %}>
-        @{{ user.login }}
+    <!-- location -->
+    <div class="{{ metadata_styles }} mb-4 {% if site.style == 'dark' %}text-white{% endif %}">
+      {% octicon location height:20 class:"mr-2 v-align-middle" fill:{{ icon_color }} aria-label:Location %}
+      Prague, Czech Republic
+    </div>
+
+    <!-- email -->
+    <div class="{{ metadata_styles }} mb-4">
+      {% octicon mail height:20 class:"mr-2 v-align-middle" fill:{{ icon_color }} aria-label:email %}
+      <a href="mailto:filip.radenovic@cmp.felk.cvut.cz" {% if site.style == 'dark' %}class="text-white"{% endif %}>
+        filip.radenovic@cmp.felk.cvut.cz
       </a>
     </div>
 
     <!-- social media -->
     {% if site.social_media %}
-      <div class="f4 mb-2">
+      <div class="f4 mb-4">
         {% for account in site.social_media %}
           <div class="{{ metadata_styles }} mb-1">
             {% assign service_shortname = account[0] %}
             {% assign service = site.data.social_media[service_shortname] %}
             {{ service.icon_svg }} 
-            <div class="ml-2 mr-2 {% if site.style == 'dark' %}text-white{% else %}text-gray{% endif %}">{{ service.name }}:</div>
-            <!-- <a href="{{ service.profile_url_prefix }}{{ account[1] }}" class="tooltipped tooltipped-se" aria-label="{{ service.name }}: {{ account[1] }}">
+            <a href="{{ service.profile_url_prefix }}{{ account[1] }}" class="{% if site.style == 'dark' %}text-white{% endif %} ml-2">
+              {{ service.name }}<span class="d-none">{{ service.name }}</span>
+            </a>
+          </div>
+        {% endfor %}
+      </div>
+    {% endif %}
+
+    <!-- social media short -->
+    {% if site.social_media_short %}
+      <div class="d-flex flex-wrap flex-items-start {% if site.layout == 'stacked' %}flex-justify-center mt-1 mt-md-3{% endif %}">
+        {% for account in site.social_media_short %}
+          <div class="{% unless forloop.last == true %}mr-3{% endunless %} mb-3">
+            {% assign service_shortname = account[0] %}
+            {% assign service = site.data.social_media[service_shortname] %}
+            <a href="{{ service.profile_url_prefix }}{{ account[1] }}" class="tooltipped tooltipped-se" aria-label="{{ service.name }}: {{ account[1] }}">
               {{ service.icon_svg }}<span class="d-none">{{ service.name }}</span>
-            </a> -->
+            </a>
           </div>
         {% endfor %}
       </div>
