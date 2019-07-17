@@ -1,10 +1,10 @@
 {% if site.layout == 'stacked' %}
   {% assign metadata_styles = 'd-md-inline-block mx-3 mb-1 mb-md-0' %}
 {% else %}
-  {% assign metadata_styles = 'd-flex flex-items-center mb-3' %}
+  {% assign metadata_styles = 'd-flex flex-items-center mb-1' %}
 {% endif %}
 
-<img src="{{ user.avatar_url }}" class="circle mb-3" style="max-width: 150px;">
+<!-- <img src="{{ user.avatar_url }}" class="circle mb-3" style="max-width: 150px;">
 <h1 class="{% if site.style == 'dark' %}text-white{% endif %} mb-2 lh-condensed">{% if user.name %}{{ user.name }}{% else %}{{ user.login }}{% endif %}</h1>
 <p class="mb-3 f4 {% if site.style == 'dark' %}text-white{% else %}text-gray{% endif %}">
   {{ user.bio }}
@@ -49,6 +49,42 @@
     {% endif %}
     {% if user.hireable %}
       <span title="Hire me" class="d-inline-block f5 rounded-2 text-white bg-green py-1 px-2">Available for hire</span>
+    {% endif %}
+  </div>
+{% endif %} -->
+
+<img src="{{ user.avatar_url }}" class="circle mb-3" style="max-width: 150px;">
+<h1 class="{% if site.style == 'dark' %}text-white{% endif %} mb-2 lh-condensed">{{ user.name }}</h1>
+<p class="f4 mb-4 {% if site.style == 'dark' %}text-white{% else %}text-gray{% endif %}">
+  PhD Student
+</p>
+
+{% if include.metadata %}
+  <div class="f4 mb-6">
+    <!-- github -->
+    <div class="{{ metadata_styles }}">
+      {% octicon mark-github height:20 class:"mr-2 v-align-middle" fill:{{ icon_color }} aria-label:GitHub %}
+      <div class="mr-2 {% if site.style == 'dark' %}text-white{% else %}text-gray{% endif %}">GitHub:</div>
+      <a href="https://github.com/{{ user.login }}" {% if site.style == 'dark' %}class="text-white"{% endif %}>
+        @{{ user.login }}
+      </a>
+    </div>
+
+    <!-- social media -->
+    {% if site.social_media %}
+      <div class="f4 mb-2">
+        {% for account in site.social_media %}
+          <div class="{{ metadata_styles }} mb-1">
+            {% assign service_shortname = account[0] %}
+            {% assign service = site.data.social_media[service_shortname] %}
+            {{ service.icon_svg }} 
+            <div class="ml-2 mr-2 {% if site.style == 'dark' %}text-white{% else %}text-gray{% endif %}">{{ service.name }}:</div>
+            <!-- <a href="{{ service.profile_url_prefix }}{{ account[1] }}" class="tooltipped tooltipped-se" aria-label="{{ service.name }}: {{ account[1] }}">
+              {{ service.icon_svg }}<span class="d-none">{{ service.name }}</span>
+            </a> -->
+          </div>
+        {% endfor %}
+      </div>
     {% endif %}
   </div>
 {% endif %}
