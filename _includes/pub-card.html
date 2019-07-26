@@ -4,9 +4,9 @@
   {% assign icon_style = 'd-inline-block text-gray mr-3' %}
 {% endif %}
 
-<div class="height-full width-full text-left {% if site.style == 'dark' %}border border-gray-dark bg-gray-dark{% else %}border border-gray-light bg-white{% endif %} rounded-1 p-2">
-  <div class="{% if site.style == 'dark' %}text-white{% else %}text-black{% endif %} text-bold ws-normal mb-1">{{ pub.title }}</div>
-  <div class="{% if site.style == 'dark' %}text-white{% else %}text-black{% endif %} ws-normal mb-1">{{ pub.authors }}</div>
+<div class="height-full width-full text-left {% if site.style == 'dark' %}border border-gray-dark bg-gray-dark{% else %}border border-gray-light bg-white{% endif %} rounded-1 p-3">
+  <div class="{% if site.style == 'dark' %}text-white{% else %}text-black{% endif %} text-bold ws-normal mb-2">{{ pub.title }}</div>
+  <div class="{% if site.style == 'dark' %}text-white{% else %}text-black{% endif %} ws-normal mb-2">{{ pub.authors }}</div>
   <div class="{% if site.style == 'dark' %}text-gray-light{% else %}text-gray{% endif %} ws-normal">
     <span class="{% if site.style == 'dark' %}text-white{% else %}text-black{% endif %} mr-4">{{ pub.where }}</span>
     {% if pub.pdf %}
