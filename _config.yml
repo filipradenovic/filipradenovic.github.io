@@ -16,6 +16,10 @@ defaults:
     values:
       layout: "post"
 
+publications:
+  - rtc16
+  - rsj+16
+
 projects:
   sort_by: stars # pushed | stars
   limit: 9
@@ -28,43 +32,12 @@ projects:
 social_media:
   googlescholar: LV6XQ00AAAAJ
   github: filipradenovic
-  # linkedin: filipradenovic
-  # facebook: filipradenovic.io
-  # instagram: filip_radenovic
-  # behance: your_username
-  # dribbble: your_username
-  # hackerrank: your_username
-  # keybase: your_username
-  # mastodon: your_username
-  # medium: your_username
-  # stackoverflow: your_user_id
-  # telegram: your_username
-  # twitter: your_username
-  # unsplash: your_username
-  # vk: your_username
-  # website: http://your_website_url
-  # youtube: your_username
 
 social_media_short:
-  # googlescholar: LV6XQ00AAAAJ
-  # github: filipradenovic
-  linkedin: filipradenovic
   researchgate: Filip_Radenovic
+  linkedin: filipradenovic
   facebook: filipradenovic.io
   instagram: filip_radenovic
-  # behance: your_username
-  # dribbble: your_username
-  # hackerrank: your_username
-  # keybase: your_username
-  # mastodon: your_username
-  # medium: your_username
-  # stackoverflow: your_user_id
-  # telegram: your_username
-  # twitter: your_username
-  # unsplash: your_username
-  # vk: your_username
-  # website: http://your_website_url
-  # youtube: your_username
 
 # topics:
 #   - name: CSS

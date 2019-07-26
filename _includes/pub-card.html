@@ -1,0 +1,53 @@
+{% if site.style == 'dark' %}
+  {% assign icon_style = 'd-inline-block text-gray-light mr-3' %}
+{% else %}
+  {% assign icon_style = 'd-inline-block text-gray mr-3' %}
+{% endif %}
+
+<div class="height-full width-full text-left {% if site.style == 'dark' %}border border-gray-dark bg-gray-dark{% else %}border border-gray-light bg-white{% endif %} rounded-1 p-2">
+  <div class="{% if site.style == 'dark' %}text-white{% else %}text-black{% endif %} text-bold ws-normal mb-1">{{ pub.title }}</div>
+  <div class="{% if site.style == 'dark' %}text-white{% else %}text-black{% endif %} ws-normal mb-1">{{ pub.authors }}</div>
+  <div class="{% if site.style == 'dark' %}text-gray-light{% else %}text-gray{% endif %} ws-normal">
+    <span class="{% if site.style == 'dark' %}text-white{% else %}text-black{% endif %} mr-4">{{ pub.where }}</span>
+    {% if pub.pdf %}
+      <a href="{{ pub.pdf }}" class="{{ icon_style }}">
+        {% octicon file-pdf height:16 class:"mr-1" fill:{{ icon_color }} aria-label:file-pdf %}pdf
+      </a>
+    {% endif %}
+    {% if pub.bib %}
+      <a href="{{ pub.bib }}" class="{{ icon_style }}">
+        {% octicon file-code height:16 class:"mr-1" fill:{{ icon_color }} aria-label:file-code %}bib
+      </a>
+    {% endif %}
+    {% if pub.code %}
+      <a href="{{ pub.code }}" class="{{ icon_style }}">
+        {% octicon repo height:16 class:"mr-1" fill:{{ icon_color }} aria-label:repo %}code
+      </a>
+    {% endif %}
+    {% if pub.video %}
+      <a href="{{ pub.video }}" class="{{ icon_style }}">
+        {% octicon play height:16 class:"mr-1" fill:{{ icon_color }} aria-label:play %}video
+      </a>
+    {% endif %}
+    {% if pub.poster %}
+      <a href="{{ pub.poster }}" class="{{ icon_style }}">
+        {% octicon file-media height:16 class:"mr-1" fill:{{ icon_color }} aria-label:file-media %}poster
+      </a>
+    {% endif %}
+    {% if pub.slides %}
+      <a href="{{ pub.slides }}" class="{{ icon_style }}">
+        {% octicon github-action height:16 class:"mr-1" fill:{{ icon_color }} aria-label:github-action %}slides
+      </a>
+    {% endif %}
+    {% if pub.oral %}
+      <a href="{{ pub.oral }}" class="{{ icon_style }}">
+        {% octicon play height:16 class:"mr-1" fill:{{ icon_color }} aria-label:play %}oral
+      </a>
+    {% endif %}
+    {% if pub.spotlight %}
+      <a href="{{ pub.spotlight }}" class="{{ icon_style }}">
+        {% octicon play height:16 class:"mr-1" fill:{{ icon_color }} aria-label:play %}spotlight
+      </a>
+    {% endif %}
+  </div>
+</div>
