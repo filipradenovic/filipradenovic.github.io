@@ -7,8 +7,8 @@
 <div class="height-full width-full text-left {% if site.style == 'dark' %}border border-gray-dark bg-gray-dark{% else %}border border-gray-light bg-white{% endif %} rounded-1 p-3">
   <div class="{% if site.style == 'dark' %}text-white{% else %}text-black{% endif %} text-bold ws-normal mb-2 f4">{{ pub.title }}</div>
   <div class="{% if site.style == 'dark' %}text-white{% else %}text-black{% endif %} ws-normal mb-2">{{ pub.authors }}</div>
+  <div class="{% if site.style == 'dark' %}text-gray-light{% else %}text-black{% endif %} mb-2">{{ pub.where }}</div>
   <div class="{% if site.style == 'dark' %}text-gray-light{% else %}text-gray{% endif %} ws-normal">
-    <span class="{% if site.style == 'dark' %}text-white{% else %}text-black{% endif %} mr-4">{{ pub.where }}</span>
     {% if pub.pdf %}
       <a href="{{ pub.pdf }}" class="{{ icon_style }}">
         {% octicon file-pdf height:16 class:"mr-1" fill:{{ icon_color }} aria-label:file-pdf %}pdf

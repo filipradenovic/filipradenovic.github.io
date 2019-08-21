@@ -1,13 +1,16 @@
 <h2 {% if site.style == 'dark' %}class="text-white"{% endif %}>Selected publications</h2>
 {% assign service = site.data.social_media['googlescholar'] %}
-<p class="f4 mb-4 mt-4 {% if site.style == 'dark' %}text-white{% else %}text-gray{% endif %}">All publications are available at my <a href="{{ service.profile_url_prefix }}{{ site.social_media['googlescholar'] }}" class="{% if site.style == 'dark' %}text-white{% endif %}">{{ service.name }}</a> profile.</p>
+<p class="f4 mb-4 mt-2 {% if site.style == 'dark' %}text-white{% else %}text-gray{% endif %}">All publications are available at my <a href="{{ service.profile_url_prefix }}{{ site.social_media['googlescholar'] }}" class="{% if site.style == 'dark' %}text-white{% endif %}">{{ service.name }}</a> profile.</p>
 <div class="d-sm-flex flex-wrap gutter-condensed mb-4">
-  {% for publication in site.publications %}
-    <div class="col-sm-12 col-md-12 col-lg-12 col-xl-12 mb-3">
-      <div class="d-flex flex-items-center mb-1 {% if site.style == 'dark' %}text-white{% endif %}">
-        {% assign pub = site.data.publications[publication] %}
-        {% include pub-card.html %}
+  {% for pub_group in site.publications %}
+    <h3 class="ml-2 mb-2 {% if site.style == 'dark' %}text-white{% endif %}">{{ pub_group.year }}:</h3>
+    {% for publication in pub_group.pubs %}
+      <div class="col-sm-12 col-md-12 col-lg-12 col-xl-12 mb-3">
+        <div class="d-flex flex-items-center {% if site.style == 'dark' %}text-white{% endif %}">
+          {% assign pub = site.data.publications[publication] %}
+          {% include pub-card.html %}
+        </div>
       </div>
-    </div>
+    {% endfor %}
   {% endfor %}
 </div>
