@@ -32,7 +32,7 @@ rit+18:
 
 mmrm17:
   title: "Working hard to know your neighbor's margins: Local descriptor learning loss"
-  authors: 'Mishchuk A., Mishkin D., R<b>Radenović F.</b>, Matas J.'
+  authors: 'Mishchuk A., Mishkin D., <b>Radenović F.</b>, Matas J.'
   where: Conference on Neural Information Processing Systems (NeurIPS) 2017
   pdf: 'http://cmp.felk.cvut.cz/~radenfil/publications/Mishchuk-NIPS17.pdf'
   bib: 'http://cmp.felk.cvut.cz/~radenfil/publications/Mishchuk-NIPS17.bib'
