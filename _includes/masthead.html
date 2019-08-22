@@ -126,11 +126,13 @@
       </div>
     {% endif %}
 
-    <ul id="navigation" class="mt-6">
-      {% for item in site.data.navigation %}
-        <li class="mb-4"> <a class="f4 {% if site.style == 'dark' %}text-white{% endif %} {% if page.url == item.link %}text-underline{% endif %}" href="{{ item.link }}">{{ item.name }}</a></li>
-      {% endfor %}
-    </ul>
+    <div class="navigation-white">
+      <ul class="mt-6">
+        {% for item in site.data.navigation %}
+          <li class="mb-4"> <a class="f4 text-white {% if page.url == item.link %} navigation-selected-white {% endif %}" href="{{ item.link }}">{{ item.name }}</a></li>
+        {% endfor %}
+      </ul>
+    </div>
 
   </div>
 {% endif %}

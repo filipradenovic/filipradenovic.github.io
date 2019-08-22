@@ -56,3 +56,21 @@
 html {
   overflow-y: scroll;
 }
+
+.navigation-white ul li a {
+  text-decoration: none; 
+}
+
+.navigation-white ul li a:hover {
+  color: #ffffff; 
+  border-bottom-width: 3px; 
+  border-bottom-style: solid; 
+  padding-bottom: 5px;
+}
+
+.navigation-selected-white {
+  color: #ffffff; 
+  border-bottom-width: 3px; 
+  border-bottom-style: solid; 
+  padding-bottom: 5px;
+}
