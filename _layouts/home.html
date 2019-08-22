@@ -5,12 +5,13 @@
     {% include masthead.html metadata=true %}
 
     <div {% if site.style == 'dark' %}class="text-white"{% endif %}>
+      {% include navigation.html %}
       {{ content }}
     </div>
 
-    <div class="my-6">
+    <!-- <div class="my-6">
       {% include publications.html %}
-    </div>
+    </div> -->
 
     <div class="my-6">
       {% include projects.html %}
@@ -36,13 +37,18 @@
 
     <div class="col-md-7 col-lg-8 col-xl-9 px-4 py-6 px-lg-7 border-top border-md-top-0 bg-gray-light" {% if site.style == 'dark' %}style="background-color: #2f363d !important"{% endif %}>
       <div class="mx-auto" style="max-width: 900px;">
+
+        <div class="f2 mb-6">
+            {% include navigation.html %}
+        </div>
+
         {% unless content == ""  %}
           <div class="f4 {% if site.style == 'dark' %}text-white{% endif %} mb-6">
             {{ content }}
           </div>
         {% endunless %}
 
-        {% include publications.html %}
+        <!-- {% include publications.html %} -->
 
         {% include projects.html %}
 
