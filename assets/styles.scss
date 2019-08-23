@@ -61,16 +61,40 @@ html {
   text-decoration: none; 
 }
 
-.navigation-white ul li a:hover {
+.navigation-white ul li a:hover,
+.navigation-selected-white {
   color: #ffffff; 
   border-bottom-width: 3px; 
   border-bottom-style: solid; 
   padding-bottom: 5px;
 }
 
-.navigation-selected-white {
-  color: #ffffff; 
-  border-bottom-width: 3px; 
-  border-bottom-style: solid; 
-  padding-bottom: 5px;
+@media (min-width: 768px) {
+#masthead {
+  position: fixed;
+  height: 100%;
+}
+#content {
+  margin-left: 41.66667%;
+}
+}
+
+@media (min-width: 1012px) {
+#masthead {
+  position: fixed;
+  height: 100%;
+}
+#content {
+  margin-left: 33.33333%;
+}
+}
+
+@media (min-width: 1280px) {
+#masthead {
+  position: fixed;
+  height: 100%;
+}
+#content {
+  margin-left: 25%;
+}
 }
