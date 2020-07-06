@@ -1,0 +1,64 @@
+layout: sidebar # sidebar | stacked
+style: dark # light | dark
+
+plugins:
+  - jekyll-octicons
+  - jekyll-github-metadata
+  - jemoji
+
+permalink: /:year/:month/:day/:title/
+
+defaults:
+  -
+    scope:
+      path: "" # an empty string here means all files in the project
+      type: "posts"
+    values:
+      layout: "post"
+
+publications:
+  - year: 2019
+    pubs:
+      - rtc19
+  - year: 2018
+    pubs:
+      - rtc18
+      - mrm18
+      - rit+18
+  - year: 2017
+    pubs:
+      - mmrm17
+  - year: 2016
+    pubs:
+      - rtc16
+      - rsj+16
+
+projects:
+  sort_by: stars # pushed | stars
+  limit: 9
+  exclude:
+    archived: false
+    forks: true
+    projects:
+      # - repo-name
+
+social_media:
+  googlescholar: LV6XQ00AAAAJ
+  github: filipradenovic
+
+social_media_short:
+  researchgate: Filip_Radenovic
+  linkedin: filipradenovic
+  facebook: filipradenovic.io
+  instagram: filip_radenovic
+
+# topics:
+#   - name: CSS
+#     web_url: https://github.com/topics/css
+#     image_url: https://raw.githubusercontent.com/github/explore/6c6508f34230f0ac0d49e847a326429eefbfc030/topics/css/css.png
+
+#   - name: Web design
+
+#   - name: Sass
+#     web_url: https://github.com/topics/sass
+#     image_url: https://raw.githubusercontent.com/github/explore/6c6508f34230f0ac0d49e847a326429eefbfc030/topics/sass/sass.png
