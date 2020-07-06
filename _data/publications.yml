@@ -1,3 +1,20 @@
+r19:
+  title: 'Visual Retrieval with Compact Image Representations'
+  authors: 'Radenović F., Chum O. (supervisor)'
+  where: 'PhD thesis, CTU in Prague 2019'
+  pdf: 'http://cmp.felk.cvut.cz/~radenfil/publications/Radenovic-TR-2019-01.pdf'
+  bib: 'http://cmp.felk.cvut.cz/~radenfil/publications/Radenovic-TR-2019-01.bib'
+  slides: 'http://cmp.felk.cvut.cz/~radenfil/publications/Radenovic-TR-2019-01-presentation.pdf'
+  # webpage: 'http://cmp.felk.cvut.cz/~radenfil/projects/thesis'
+
+trc19:
+  title: 'Targeted Mismatch Adversarial Attack: Query with a Flower to Retrieve the Tower'
+  authors: 'Tolias G., <b>Radenović F.</b>, Chum O.'
+  where: 'International Conference on Computer Vision (ICCV) 2019'
+  pdf: 'http://cmp.felk.cvut.cz/~radenfil/publications/Tolias-ICCV19.pdf'
+  bib: 'http://cmp.felk.cvut.cz/~radenfil/publications/Tolias-ICCV19.bib'
+  code: 'https://github.com/gtolias/tma'
+
 rtc19:
   title: 'Fine-tuning CNN Image Retrieval with No Human Annotation'
   authors: '<b>Radenović F.</b>, Tolias G., Chum O.'
@@ -45,7 +62,7 @@ rtc16:
   pdf: 'http://cmp.felk.cvut.cz/~radenfil/publications/Radenovic-ECCV16.pdf'
   bib: 'http://cmp.felk.cvut.cz/~radenfil/publications/Radenovic-ECCV16.bib'
   code: 'http://cmp.felk.cvut.cz/cnnimageretrieval'
-  poster: 'http://cmp.felk.cvut.cz/~radenfil/publications/Radenovic-ECCV16poster.pdf'
+  # poster: 'http://cmp.felk.cvut.cz/~radenfil/publications/Radenovic-ECCV16poster.pdf'
   slides: 'http://cmp.felk.cvut.cz/~radenfil/publications/Radenovic-ECCV16oral.pptx'
   oral: 'http://videolectures.net/eccv2016_radenovic_cnn_image/?q=Filip%20Radenovic'
 
@@ -55,10 +72,51 @@ rsj+16:
   where: 'Conference on Computer Vision and Pattern Recognition (CVPR) 2016'
   pdf: 'http://cmp.felk.cvut.cz/~radenfil/publications/Radenovic-CVPR16.pdf'
   bib: 'http://cmp.felk.cvut.cz/~radenfil/publications/Radenovic-CVPR16.bib'
-  video: 'https://youtu.be/xu-nWgjWKI0'
-  poster: 'http://cmp.felk.cvut.cz/~radenfil/publications/Radenovic-CVPR16poster.pdf'
+  # video: 'https://youtu.be/xu-nWgjWKI0'
+  # poster: 'http://cmp.felk.cvut.cz/~radenfil/publications/Radenovic-CVPR16poster.pdf'
   slides: 'http://cmp.felk.cvut.cz/~radenfil/publications/Radenovic-CVPR16presentation.pdf'
   spotlight: 'https://youtu.be/cCLixYZicuM'
+
+shr+15:
+  title: 'Hyperpoints and Fine Vocabularies for Large-Scale Location Recognition'
+  authors: 'Sattler T., Havlena M., <b>Radenović F.</b>, Schindler K., Pollefeys M.'
+  where: 'International Conference on Computer Vision (ICCV) 2015'
+  pdf: 'http://cmp.felk.cvut.cz/~radenfil/publications/Sattler-ICCV15.pdf'
+  bib: 'http://cmp.felk.cvut.cz/~radenfil/publications/Sattler-ICCV15.bib'
+  # poster: 'http://cmp.felk.cvut.cz/~radenfil/publications/Sattler-ICCV15poster.pdf'
+
+cvh+15:
+  title: 'Camera Elevation Estimation from a Single Mountain Landscape Photograph'
+  authors: 'Čadík M., Vašíček J., Hradiš M., <b>Radenović F.</b>, Chum O.'
+  where: 'British Machine Vision Conference (BMVC) 2015'
+  pdf: 'http://cmp.felk.cvut.cz/~radenfil/publications/Cadik-BMVC15.pdf'
+  bib: 'http://cmp.felk.cvut.cz/~radenfil/publications/Cadik-BMVC15.bib'
+
+rjc15:
+  title: 'Multiple Measurements and Joint Dimensionality Reduction for Large Scale Image Search with Short Vectors'
+  authors: '<b>Radenović F.</b>, Jégou H., Chum O.'
+  where: 'International Conference on Multimedia Retrieval (ICMR) 2015'
+  pdf: 'http://cmp.felk.cvut.cz/~radenfil/publications/Radenovic-ICMR15.pdf'
+  bib: 'http://cmp.felk.cvut.cz/~radenfil/publications/Radenovic-ICMR15.bib'
+  # poster: 'http://cmp.felk.cvut.cz/~radenfil/publications/Radenovic-ICMR15poster.pdf'
+  slides: 'http://cmp.felk.cvut.cz/~radenfil/publications/Radenovic-ICMR15presentation.pdf'
+
+srcf15:
+  title: 'From Single Image Query to Detailed 3D Reconstruction'
+  authors: 'Schönberger J. L., <b>Radenović F.</b>, Chum O., Frahm J.'
+  where: Conference on Computer Vision and Pattern Recognition (CVPR) 2015
+  pdf: 'http://cmp.felk.cvut.cz/~radenfil/publications/Schonberger-CVPR15.pdf'
+  bib: 'http://cmp.felk.cvut.cz/~radenfil/publications/Schonberger-CVPR15.bib'
+  video: 'https://youtu.be/DIv1aGKqSIk'
+  # poster: 'http://cmp.felk.cvut.cz/~radenfil/publications/Schonberger-CVPR15poster.pdf'
+
+mrcm14:
+  title: 'Efficient Image Detail Mining'
+  authors: 'Mikulík A., <b>Radenović F.</b>, Chum O., Matas J.'
+  where: 'Asian Conference on Computer Vision (ACCV) 2014'
+  pdf: 'http://cmp.felk.cvut.cz/~radenfil/publications/Mikulik-ACCV14.pdf'
+  bib: 'http://cmp.felk.cvut.cz/~radenfil/publications/Mikulik-ACCV14.bib'
+  # poster: 'http://cmp.felk.cvut.cz/~radenfil/publications/Mikulik-ACCV14poster.pdf'
 
 spr13:
   title: 'Genetic algorithm for rigid body reconstruction after micro-Doppler removal in the radar imaging analysis'

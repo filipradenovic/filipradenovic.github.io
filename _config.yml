@@ -21,12 +21,14 @@ defaults:
 publications:
   - year: 2019
     pubs:
+      - r19
+      - trc19
       - rtc19
   - year: 2018
     pubs:
       - rtc18
-      - mrm18
       - rit+18
+      - mrm18
   - year: 2017
     pubs:
       - mmrm17
@@ -34,6 +36,15 @@ publications:
     pubs:
       - rtc16
       - rsj+16
+  - year: 2015
+    pubs:
+      - rjc15
+      - srcf15
+      - shr+15
+      - cvh+15
+  - year: 2014
+    pubs:
+      - mrcm14
   - year: 2013
     pubs:
       - spr13
@@ -44,9 +55,10 @@ projects:
   limit: 9
   exclude:
     archived: false
-    forks: true
+    forks: false
     projects:
-      # - repo-name
+      - filipradenovic.github.io
+      - ClassyVision
 
 social_media:
   googlescholar: LV6XQ00AAAAJ
