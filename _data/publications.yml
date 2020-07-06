@@ -52,10 +52,24 @@ rtc16:
 rsj+16:
   title: 'From Dusk till Dawn: Modeling in the Dark'
   authors: '<b>Radenović F.</b>, Schönberger J. L., Ji D., Frahm J., Chum O., Matas J.'
-  where: 'Conference on Computer Vision and Pattern Recognition (CVPR) 2016' 
+  where: 'Conference on Computer Vision and Pattern Recognition (CVPR) 2016'
   pdf: 'http://cmp.felk.cvut.cz/~radenfil/publications/Radenovic-CVPR16.pdf'
   bib: 'http://cmp.felk.cvut.cz/~radenfil/publications/Radenovic-CVPR16.bib'
   video: 'https://youtu.be/xu-nWgjWKI0'
   poster: 'http://cmp.felk.cvut.cz/~radenfil/publications/Radenovic-CVPR16poster.pdf'
   slides: 'http://cmp.felk.cvut.cz/~radenfil/publications/Radenovic-CVPR16presentation.pdf'
   spotlight: 'https://youtu.be/cCLixYZicuM'
+
+spr13:
+  title: 'Genetic algorithm for rigid body reconstruction after micro-Doppler removal in the radar imaging analysis'
+  authors: 'Stanković L., Popović-Bugarin V., <b>Radenović F.</b>'
+  where: 'Signal Processing 2013'
+  pdf: 'http://cmp.felk.cvut.cz/~radenfil/publications/Stankovic-SIGPRO13.pdf'
+  bib: 'http://cmp.felk.cvut.cz/~radenfil/publications/Stankovic-SIGPRO13.bib'
+
+prs13:
+  title: 'Analytical Rigid Body Reconstruction after Micro-Doppler Removal'
+  authors: 'Popović-Bugarin V., <b>Radenović F.</b>, Stanković L.'
+  where: 'International Symposium on Image and Signal Processing (ISPA) 2013'
+  pdf: 'http://cmp.felk.cvut.cz/~radenfil/publications/Popovic-ISPA13.pdf'
+  bib: 'http://cmp.felk.cvut.cz/~radenfil/publications/Popovic-ISPA13.bib'
