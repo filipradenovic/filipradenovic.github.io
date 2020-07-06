@@ -11,7 +11,7 @@
   <div class="{% if site.style == 'dark' %}text-gray-light{% else %}text-gray{% endif %} ws-normal">
     {% if pub.pdf %}
       <a href="{{ pub.pdf }}" class="{{ icon_style }}">
-        {% octicon file height:16 class:"mr-1" fill:{{ icon_color }} aria-label:file %}pdf
+        {% octicon file-pdf height:16 class:"mr-1" fill:{{ icon_color }} aria-label:file-pdf %}pdf
       </a>
     {% endif %}
     {% if pub.bib %}
@@ -21,7 +21,7 @@
     {% endif %}
     {% if pub.code %}
       <a href="{{ pub.code }}" class="{{ icon_style }}">
-        {% octicon code-square height:16 class:"mr-1" fill:{{ icon_color }} aria-label:code-square %}code
+        {% octicon repo height:16 class:"mr-1" fill:{{ icon_color }} aria-label:repo %}code
       </a>
     {% endif %}
     {% if pub.video %}
@@ -31,12 +31,12 @@
     {% endif %}
     {% if pub.poster %}
       <a href="{{ pub.poster }}" class="{{ icon_style }}">
-        {% octicon image height:16 class:"mr-1" fill:{{ icon_color }} aria-label:image %}poster
+        {% octicon file-media height:16 class:"mr-1" fill:{{ icon_color }} aria-label:file-media %}poster
       </a>
     {% endif %}
     {% if pub.slides %}
       <a href="{{ pub.slides }}" class="{{ icon_style }}">
-        {% octicon device-desktop height:16 class:"mr-1" fill:{{ icon_color }} aria-label:device-desktop %}slides
+        {% octicon github-action height:16 class:"mr-1" fill:{{ icon_color }} aria-label:github-action %}slides
       </a>
     {% endif %}
     {% if pub.oral %}
