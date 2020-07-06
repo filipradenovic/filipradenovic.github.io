@@ -73,6 +73,7 @@ html {
 #masthead {
   position: fixed;
   height: 100%;
+  overflow-y: auto;
 }
 #content {
   margin-left: 41.66667%;
