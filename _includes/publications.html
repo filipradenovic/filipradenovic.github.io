@@ -1,8 +1,7 @@
-<h1 class=" mb-6 {% if site.style == 'dark' %}text-white{% endif %}">Publications</h1>
+<h1 class="mb-6 {% if site.style == 'dark' %}text-white{% endif %}">Publications</h1>
 
 {% assign service = site.data.social_media['googlescholar'] %}
-
-<p class="f4 mb-4 {% if site.style == 'dark' %}text-white{% else %}text-gray{% endif %}">All publications are available at <a href="{{ service.profile_url_prefix }}{{ site.social_media['googlescholar'] }}" class="text-underline {% if site.style == 'dark' %}text-white{% endif %}">my {{ service.name }} profile</a>.</p>
+<p class="f4 mb-4 {% if site.style == 'dark' %}text-white{% else %}text-gray{% endif %}">All publications are available on <a href="{{ service.profile_url_prefix }}{{ site.social_media['googlescholar'] }}" class="text-underline {% if site.style == 'dark' %}text-white{% endif %}">my {{ service.name }} profile</a>.</p>
 
 <h2 class=" mb-4 {% if site.style == 'dark' %}text-white{% endif %}">Selected publications</h2>
 
