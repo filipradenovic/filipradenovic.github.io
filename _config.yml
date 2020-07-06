@@ -1,8 +1,6 @@
 layout: sidebar # sidebar | stacked
 style: dark # light | dark
 
-repository: filipradenovic/filipradenovic.github.io
-
 plugins:
   - jekyll-octicons
   - jekyll-github-metadata
