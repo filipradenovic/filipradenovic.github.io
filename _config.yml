@@ -18,6 +18,36 @@ defaults:
     values:
       layout: "post"
 
+updates:
+  - date: '2020-07-01'
+    content: 'Query expansion learning paper accepted to ECCV 2020.'
+  - date: '2020-06-01'
+    content: 'Received Outstanding Reviewer award at the CVPR 2020.'
+  - date: '2020-05-01'
+    content: Received Antonin Svoboda award for the Best PhD Thesis in 2019 from Czech Society for Cybernetics and Informatics.
+  - date: '2019-09-01'
+    content: 'Started Research Scientist position at <a class="text-white text-underline" href="https://ai.facebook.com/">Facebook AI</a> in Menlo Park.'
+  - date: '2019-09-01'
+    content: 'Received Dean''s award for Prestigious PhD Thesis from the Faculty of Electrical Engineering, CTU in Prague.'
+  - date: '2019-08-01'
+    content: 'Defended <a class="text-white text-underline" href="http://cmp.felk.cvut.cz/publications/Radenovic-TR-2019-01.pdf">Ph.D. thesis</a> at the Czech Technical University in Prague.'
+  - date: '2019-07-01'
+    content: 'Targeted mismatch adversarial attack <a class="text-white text-underline" href="http://cmp.felk.cvut.cz/publications/Tolias-ICCV19.pdf">paper</a> accepted to ICCV. <a class="text-white text-underline" href="https://github.com/gtolias/tma">Code</a> available.'
+  - date: '2019-06-01'
+    content: 'Received Outstanding Reviewer award at the CVPR 2019.'
+  - date: '2019-06-01'
+    content: 'Our team was ranked 9th / 11th in the Google Landmark <a class="text-white text-underline" href="https://www.kaggle.com/c/landmark-retrieval-2019">Retrieval</a> / <a class="text-white text-underline" href="https://www.kaggle.com/c/landmark-recognition-2019">Recognition</a> 2019 Challenges.'
+  - date: '2018-10-01'
+    content: '<a class="text-white text-underline" href="http://cmp.felk.cvut.cz/cnnimageretrieval/">Code and data</a> released for our ECCV 2018 <a class="text-white text-underline" href="publications/Radenovic-ECCV18.pdf">paper</a> on deep shape matching.'
+  - date: '2018-07-01'
+    content: 'Two papers accepted to ECCV 2018: <a class="text-white text-underline" href="publications/Radenovic-ECCV18.pdf">Deep Shape Matching</a> and <a class="text-white text-underline" href="publications/Mishkin-ECCV18.pdf">Learning Affine Regions</a>.'
+  - date: '2018-06-01'
+    content: 'Our team was ranked 3rd / 6th in the Google Landmark <a class="text-white text-underline" href="https://www.kaggle.com/c/landmark-recognition-challenge">Recognition</a> / <a class="text-white text-underline" href="https://www.kaggle.com/c/landmark-retrieval-challenge">Retrieval</a> Challenges.'
+  - date: '2018-06-01'
+    content: 'Started research internship at <a class="text-white text-underline" href="https://ai.facebook.com/">Facebook AI</a> in Menlo Park.'
+  - date: '2018-04-01'
+    content: 'Large-scale image retrieval benchmarking <a class="text-white text-underline" href="http://cmp.felk.cvut.cz/publications/Radenovic-CVPR18.pdf">paper</a> accepted to CVPR as poster. <a class="text-white text-underline" href="http://cmp.felk.cvut.cz/revisitop/">Code and data</a> available.'
+
 publications:
   - year: 2019
     pubs:
