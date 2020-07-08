@@ -32,7 +32,7 @@
   {% endfor %}
 
   <!-- GitHub repositories not owned by me -->
-  <!-- {% for data in site.data %}
+  {% for data in site.data %}
     {% for repository in data %}
       {% if repository contains 'git_url' %}
         <div class="col-sm-12 col-md-12 col-lg-6 col-xl-6 mb-3">
@@ -42,15 +42,12 @@
     {% endfor %}
   {% endfor %}
 
-  <p>Test!!!</p>
-  {{ site.data.tma.git_url }} -->
-
   <!-- External repositories added through _data/projects.yml -->
   <!-- {% for repo_name in site.projects.external.projects %}
-  <div class="col-sm-12 col-md-12 col-lg-6 col-xl-6 mb-3">
-    {% assign repository = site.data.projects[repo_name] %}
-    {% include repo-card.html %}
-  </div>
+    <div class="col-sm-12 col-md-12 col-lg-6 col-xl-6 mb-3">
+      {% assign repository = site.data.projects[repo_name] %}
+      {% include repo-card.html %}
+    </div>
   {% endfor %} -->
 
 </div>

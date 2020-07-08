@@ -4,10 +4,22 @@ layout: sidebar # sidebar | stacked
 style: dark # light | dark
 
 plugins:
+  # GitHub Pages plugins
   - jekyll-octicons
   - jekyll-github-metadata
-  - jekyll-get-json
+  - jekyll-coffeescript
+  - jekyll-commonmark-ghpages
+  - jekyll-gist
+  - jekyll-paginate
+  - jekyll-relative-links
+  - jekyll-optional-front-matter
+  - jekyll-readme-index
+  - jekyll-default-layout
+  - jekyll-titles-from-headings
   - jemoji
+
+  # Other plugins
+  - jekyll-get-json
 
 permalink: /:year/:month/:day/:title/
 
@@ -95,9 +107,9 @@ projects:
     projects:
       - tma
 
-# repositories now owned by me
+# Repositories not owned by me
 jekyll_get_json:
-  - data: tma
+  - data: gtolias/tma
     json: 'https://api.github.com/repos/gtolias/tma'
 
 social_media:
