@@ -9,6 +9,28 @@
   <div class="{% if site.style == 'dark' %}text-white{% else %}text-black{% endif %} ws-normal mb-2">{{ pub.authors }}</div>
   <div class="{% if site.style == 'dark' %}text-gray-light{% else %}text-black{% endif %} mb-2">{{ pub.where }}</div>
   <div class="{% if site.style == 'dark' %}text-gray-light{% else %}text-gray{% endif %} ws-normal">
+    {% if pub.files %}
+      {%if pub.files contains "pdf" %}
+        <a href="/publications/{{ pub.id }}.pdf" class="{{ icon_style }}">
+          {% octicon file height:16 class:"mr-1" fill:{{ icon_color }} aria-label:file %}pdf
+        </a>
+      {% endif %}
+      {%if pub.files contains "bib" %}
+        <a href="/publications/{{ pub.id }}.bib" class="{{ icon_style }}">
+          {% octicon file-code height:16 class:"mr-1" fill:{{ icon_color }} aria-label:file-code %}bib
+        </a>
+      {% endif %}
+      {%if pub.files contains "poster" %}
+        <a href="/publications/{{ pub.poster }}poster.pdf" class="{{ icon_style }}">
+          {% octicon image height:16 class:"mr-1" fill:{{ icon_color }} aria-label:image %}poster
+        </a>
+      {% endif %}
+      {%if pub.files contains "slides" %}
+        <a href="/publications/{{ pub.id }}slides.pdf" class="{{ icon_style }}">
+          {% octicon device-desktop height:16 class:"mr-1" fill:{{ icon_color }} aria-label:device-desktop %}slides
+        </a>
+      {% endif %}
+    {% endif %}
     {% if pub.pdf %}
       <a href="{{ pub.pdf }}" class="{{ icon_style }}">
         {% octicon file height:16 class:"mr-1" fill:{{ icon_color }} aria-label:file %}pdf
@@ -17,16 +39,6 @@
     {% if pub.bib %}
       <a href="{{ pub.bib }}" class="{{ icon_style }}">
         {% octicon file-code height:16 class:"mr-1" fill:{{ icon_color }} aria-label:file-code %}bib
-      </a>
-    {% endif %}
-    {% if pub.code %}
-      <a href="{{ pub.code }}" class="{{ icon_style }}">
-        {% octicon code-square height:16 class:"mr-1" fill:{{ icon_color }} aria-label:code-square %}code
-      </a>
-    {% endif %}
-    {% if pub.video %}
-      <a href="{{ pub.video }}" class="{{ icon_style }}">
-        {% octicon play height:16 class:"mr-1" fill:{{ icon_color }} aria-label:play %}video
       </a>
     {% endif %}
     {% if pub.poster %}
@@ -39,14 +51,24 @@
         {% octicon device-desktop height:16 class:"mr-1" fill:{{ icon_color }} aria-label:device-desktop %}slides
       </a>
     {% endif %}
-    {% if pub.oral %}
-      <a href="{{ pub.oral }}" class="{{ icon_style }}">
-        {% octicon play height:16 class:"mr-1" fill:{{ icon_color }} aria-label:play %}oral
+    {% if pub.video %}
+      <a href="{{ pub.video }}" class="{{ icon_style }}">
+        {% octicon play height:16 class:"mr-1" fill:{{ icon_color }} aria-label:play %}video
       </a>
     {% endif %}
     {% if pub.spotlight %}
       <a href="{{ pub.spotlight }}" class="{{ icon_style }}">
         {% octicon play height:16 class:"mr-1" fill:{{ icon_color }} aria-label:play %}spotlight
+      </a>
+    {% endif %}
+    {% if pub.oral %}
+      <a href="{{ pub.oral }}" class="{{ icon_style }}">
+        {% octicon play height:16 class:"mr-1" fill:{{ icon_color }} aria-label:play %}oral
+      </a>
+    {% endif %}
+    {% if pub.code %}
+      <a href="{{ pub.code }}" class="{{ icon_style }}">
+        {% octicon code-square height:16 class:"mr-1" fill:{{ icon_color }} aria-label:code-square %}code
       </a>
     {% endif %}
   </div>
