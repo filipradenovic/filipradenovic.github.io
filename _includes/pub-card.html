@@ -4,6 +4,59 @@
   {% assign icon_style = 'd-inline-block text-gray mr-3' %}
 {% endif %}
 
+<style>
+  /*********************************
+   The list of publication items
+   *********************************/
+  /* The list of items */
+  .biblist { }
+  /* The item */
+  .biblist li { }
+  /* You can define custom styles for plstyle field here. */
+  /*************************************
+  The box that contain BibTeX code
+  *************************************/
+  div.noshow { display: none; }
+  div.bibtex {
+    margin-right: 0%;
+    margin-top: 1em;
+    margin-bottom: 0em;
+    border: 1px solid lightgray;
+    border-radius: 2px;
+    padding: 1em;
+  }
+  div.bibtex pre {overflow: auto;  width: 100%; padding: 0em 0em;}
+</style>
+
+<script type="text/javascript">
+  // Toggle Display of BibTeX
+  function toggleBibtex(articleid) {
+    var bib = document.getElementById(articleid + '_bib');
+    var bib_pre = document.getElementById(articleid + '_bib_pre');
+    if (bib) {
+
+      // get text in bib div
+      var client = new XMLHttpRequest();
+      client.open('GET', '/publications/' + articleid + '.bib');
+      client.onreadystatechange = function() {
+        bib_pre.innerText = client.responseText
+      }
+      client.send();
+
+      // show / no show
+      if(bib.className.indexOf('bibtex') != -1) {
+          bib.className.indexOf('noshow') == -1?bib.className = 'bibtex noshow':bib.className = 'bibtex';
+      }
+    } else {
+        return;
+    }
+  }
+</script>
+<script>
+  function getBibtex(articleid) {
+  }
+</script>
+
 <div class="height-full width-full text-left {% if site.style == 'dark' %}border border-gray-dark bg-gray-dark{% else %}border border-gray-light bg-white{% endif %} rounded-1 p-3">
   <div class="{% if site.style == 'dark' %}text-white{% else %}text-black{% endif %} text-bold ws-normal mb-2 f4">{{ pub.title }}</div>
   <div class="{% if site.style == 'dark' %}text-white{% else %}text-black{% endif %} ws-normal mb-2">{{ pub.authors }}</div>
@@ -16,7 +69,8 @@
         </a>
       {% endif %}
       {%if pub.files contains "bib" %}
-        <a href="/publications/{{ pub.id }}.bib" class="{{ icon_style }}">
+        <!-- <a href="/publications/{{ pub.id }}.bib" class="{{ icon_style }}"> -->
+        <a href="javascript:toggleBibtex('{{ pub.id }}')" class="{{ icon_style }}">
           {% octicon file-code height:16 class:"mr-1" fill:{{ icon_color }} aria-label:file-code %}bib
         </a>
       {% endif %}
@@ -72,4 +126,9 @@
       </a>
     {% endif %}
   </div>
+  {% if pub.files and pub.files contains "pdf" %}
+  <div id="{{ pub.id }}_bib" class="bibtex noshow">
+    <pre id="{{ pub.id }}_bib_pre" class="text-gray-light"></pre>
+  </div>
+  {% endif %}
 </div>
