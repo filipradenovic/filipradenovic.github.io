@@ -317,6 +317,9 @@ html {
   border-bottom-style: solid;
   padding-bottom: 5px; }
 
+.link-hover-gray-extra-light:hover {
+  color: #959da5 !important; }
+
 .text-gray-extra-light {
   color: #959da5 !important; }
 
