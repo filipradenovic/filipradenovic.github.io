@@ -47,8 +47,7 @@
         </a>
       {% endif %}
       {%if pub.files contains "bib" %}
-        <!-- <a href="/publications/{{ pub.id }}.bib" class="{{ icon_style }}"> -->
-        <a href="javascript:toggleBibtex('{{ pub.id }}')" class="{{ icon_style }}">
+        <a href="/publications/{{ pub.id }}.bib" onclick="toggleBibtex('{{ pub.id }}');return false;" class="{{ icon_style }}">
           {% octicon file-code height:16 class:"mr-1" fill:{{ icon_color }} aria-label:file-code %}bib
         </a>
       {% endif %}
