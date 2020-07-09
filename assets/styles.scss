@@ -69,7 +69,13 @@ html {
   padding-bottom: 5px;
 }
 
-.text-gray-extra-light{color:#959da5 !important}
+.link-hover-gray-extra-light:hover {
+  color:#959da5 !important
+}
+
+.text-gray-extra-light {
+  color:#959da5 !important;
+}
 
 @media (min-width: 768px) {
 #masthead {
