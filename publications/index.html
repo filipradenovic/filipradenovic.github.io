@@ -209,6 +209,59 @@
           
           
 
+<style>
+  /*********************************
+   The list of publication items
+   *********************************/
+  /* The list of items */
+  .biblist { }
+  /* The item */
+  .biblist li { }
+  /* You can define custom styles for plstyle field here. */
+  /*************************************
+  The box that contain BibTeX code
+  *************************************/
+  div.noshow { display: none; }
+  div.bibtex {
+    margin-right: 0%;
+    margin-top: 1em;
+    margin-bottom: 0em;
+    border: 1px solid lightgray;
+    border-radius: 2px;
+    padding: 1em;
+  }
+  div.bibtex pre {overflow: auto;  width: 100%; padding: 0em 0em;}
+</style>
+
+<script type="text/javascript">
+  // Toggle Display of BibTeX
+  function toggleBibtex(articleid) {
+    var bib = document.getElementById(articleid + '_bib');
+    var bib_pre = document.getElementById(articleid + '_bib_pre');
+    if (bib) {
+
+      // get text in bib div
+      var client = new XMLHttpRequest();
+      client.open('GET', '/publications/' + articleid + '.bib');
+      client.onreadystatechange = function() {
+        bib_pre.innerText = client.responseText
+      }
+      client.send();
+
+      // show / no show
+      if(bib.className.indexOf('bibtex') != -1) {
+          bib.className.indexOf('noshow') == -1?bib.className = 'bibtex noshow':bib.className = 'bibtex';
+      }
+    } else {
+        return;
+    }
+  }
+</script>
+<script>
+  function getBibtex(articleid) {
+  }
+</script>
+
 <div class="height-full width-full text-left border border-gray-dark bg-gray-dark rounded-1 p-3">
   <div class="text-white text-bold ws-normal mb-2 f4">Visual Retrieval with Compact Image Representations</div>
   <div class="text-white ws-normal mb-2"><b>Radenović F.</b>, Chum O. (supervisor)</div>
@@ -221,7 +274,8 @@
         </a>
       
       
-        <a href="/publications/r19.bib" class="d-inline-block text-gray-light mr-3">
+        <!-- <a href="/publications/r19.bib" class="d-inline-block text-gray-light mr-3"> -->
+        <a href="javascript:toggleBibtex('r19')" class="d-inline-block text-gray-light mr-3">
           <svg height="16" class="octicon octicon-file-code mr-1" fill="#ffffff" aria-label="file-code" viewBox="0 0 16 16" version="1.1" width="16" role="img"><path fill-rule="evenodd" d="M4 1.75C4 .784 4.784 0 5.75 0h5.586c.464 0 .909.184 1.237.513l2.914 2.914c.329.328.513.773.513 1.237v8.586A1.75 1.75 0 0114.25 15h-9a.75.75 0 010-1.5h9a.25.25 0 00.25-.25V6h-2.75A1.75 1.75 0 0110 4.25V1.5H5.75a.25.25 0 00-.25.25v2.5a.75.75 0 01-1.5 0v-2.5zm7.5-.188V4.25c0 .138.112.25.25.25h2.688a.252.252 0 00-.011-.013l-2.914-2.914a.272.272 0 00-.013-.011zM5.72 6.72a.75.75 0 000 1.06l1.47 1.47-1.47 1.47a.75.75 0 101.06 1.06l2-2a.75.75 0 000-1.06l-2-2a.75.75 0 00-1.06 0zM3.28 7.78a.75.75 0 00-1.06-1.06l-2 2a.75.75 0 000 1.06l2 2a.75.75 0 001.06-1.06L1.81 9.25l1.47-1.47z"></path></svg>bib
         </a>
       
@@ -241,6 +295,11 @@
     
     
   </div>
+  
+  <div id="r19_bib" class="bibtex noshow">
+    <pre id="r19_bib_pre" class="text-gray-light"></pre>
+  </div>
+  
 </div>
 
         </div>
@@ -250,6 +309,59 @@
         <div class="d-flex flex-items-center text-white">
           
           
+
+<style>
+  /*********************************
+   The list of publication items
+   *********************************/
+  /* The list of items */
+  .biblist { }
+  /* The item */
+  .biblist li { }
+  /* You can define custom styles for plstyle field here. */
+  /*************************************
+  The box that contain BibTeX code
+  *************************************/
+  div.noshow { display: none; }
+  div.bibtex {
+    margin-right: 0%;
+    margin-top: 1em;
+    margin-bottom: 0em;
+    border: 1px solid lightgray;
+    border-radius: 2px;
+    padding: 1em;
+  }
+  div.bibtex pre {overflow: auto;  width: 100%; padding: 0em 0em;}
+</style>
+
+<script type="text/javascript">
+  // Toggle Display of BibTeX
+  function toggleBibtex(articleid) {
+    var bib = document.getElementById(articleid + '_bib');
+    var bib_pre = document.getElementById(articleid + '_bib_pre');
+    if (bib) {
+
+      // get text in bib div
+      var client = new XMLHttpRequest();
+      client.open('GET', '/publications/' + articleid + '.bib');
+      client.onreadystatechange = function() {
+        bib_pre.innerText = client.responseText
+      }
+      client.send();
+
+      // show / no show
+      if(bib.className.indexOf('bibtex') != -1) {
+          bib.className.indexOf('noshow') == -1?bib.className = 'bibtex noshow':bib.className = 'bibtex';
+      }
+    } else {
+        return;
+    }
+  }
+</script>
+<script>
+  function getBibtex(articleid) {
+  }
+</script>
 
 <div class="height-full width-full text-left border border-gray-dark bg-gray-dark rounded-1 p-3">
   <div class="text-white text-bold ws-normal mb-2 f4">Targeted Mismatch Adversarial Attack: Query with a Flower to Retrieve the Tower</div>
@@ -263,7 +375,8 @@
         </a>
       
       
-        <a href="/publications/trc19.bib" class="d-inline-block text-gray-light mr-3">
+        <!-- <a href="/publications/trc19.bib" class="d-inline-block text-gray-light mr-3"> -->
+        <a href="javascript:toggleBibtex('trc19')" class="d-inline-block text-gray-light mr-3">
           <svg height="16" class="octicon octicon-file-code mr-1" fill="#ffffff" aria-label="file-code" viewBox="0 0 16 16" version="1.1" width="16" role="img"><path fill-rule="evenodd" d="M4 1.75C4 .784 4.784 0 5.75 0h5.586c.464 0 .909.184 1.237.513l2.914 2.914c.329.328.513.773.513 1.237v8.586A1.75 1.75 0 0114.25 15h-9a.75.75 0 010-1.5h9a.25.25 0 00.25-.25V6h-2.75A1.75 1.75 0 0110 4.25V1.5H5.75a.25.25 0 00-.25.25v2.5a.75.75 0 01-1.5 0v-2.5zm7.5-.188V4.25c0 .138.112.25.25.25h2.688a.252.252 0 00-.011-.013l-2.914-2.914a.272.272 0 00-.013-.011zM5.72 6.72a.75.75 0 000 1.06l1.47 1.47-1.47 1.47a.75.75 0 101.06 1.06l2-2a.75.75 0 000-1.06l-2-2a.75.75 0 00-1.06 0zM3.28 7.78a.75.75 0 00-1.06-1.06l-2 2a.75.75 0 000 1.06l2 2a.75.75 0 001.06-1.06L1.81 9.25l1.47-1.47z"></path></svg>bib
         </a>
       
@@ -283,6 +396,11 @@
       </a>
     
   </div>
+  
+  <div id="trc19_bib" class="bibtex noshow">
+    <pre id="trc19_bib_pre" class="text-gray-light"></pre>
+  </div>
+  
 </div>
 
         </div>
@@ -292,6 +410,59 @@
         <div class="d-flex flex-items-center text-white">
           
           
+
+<style>
+  /*********************************
+   The list of publication items
+   *********************************/
+  /* The list of items */
+  .biblist { }
+  /* The item */
+  .biblist li { }
+  /* You can define custom styles for plstyle field here. */
+  /*************************************
+  The box that contain BibTeX code
+  *************************************/
+  div.noshow { display: none; }
+  div.bibtex {
+    margin-right: 0%;
+    margin-top: 1em;
+    margin-bottom: 0em;
+    border: 1px solid lightgray;
+    border-radius: 2px;
+    padding: 1em;
+  }
+  div.bibtex pre {overflow: auto;  width: 100%; padding: 0em 0em;}
+</style>
+
+<script type="text/javascript">
+  // Toggle Display of BibTeX
+  function toggleBibtex(articleid) {
+    var bib = document.getElementById(articleid + '_bib');
+    var bib_pre = document.getElementById(articleid + '_bib_pre');
+    if (bib) {
+
+      // get text in bib div
+      var client = new XMLHttpRequest();
+      client.open('GET', '/publications/' + articleid + '.bib');
+      client.onreadystatechange = function() {
+        bib_pre.innerText = client.responseText
+      }
+      client.send();
+
+      // show / no show
+      if(bib.className.indexOf('bibtex') != -1) {
+          bib.className.indexOf('noshow') == -1?bib.className = 'bibtex noshow':bib.className = 'bibtex';
+      }
+    } else {
+        return;
+    }
+  }
+</script>
+<script>
+  function getBibtex(articleid) {
+  }
+</script>
 
 <div class="height-full width-full text-left border border-gray-dark bg-gray-dark rounded-1 p-3">
   <div class="text-white text-bold ws-normal mb-2 f4">Fine-tuning CNN Image Retrieval with No Human Annotation</div>
@@ -305,7 +476,8 @@
         </a>
       
       
-        <a href="/publications/rtc19.bib" class="d-inline-block text-gray-light mr-3">
+        <!-- <a href="/publications/rtc19.bib" class="d-inline-block text-gray-light mr-3"> -->
+        <a href="javascript:toggleBibtex('rtc19')" class="d-inline-block text-gray-light mr-3">
           <svg height="16" class="octicon octicon-file-code mr-1" fill="#ffffff" aria-label="file-code" viewBox="0 0 16 16" version="1.1" width="16" role="img"><path fill-rule="evenodd" d="M4 1.75C4 .784 4.784 0 5.75 0h5.586c.464 0 .909.184 1.237.513l2.914 2.914c.329.328.513.773.513 1.237v8.586A1.75 1.75 0 0114.25 15h-9a.75.75 0 010-1.5h9a.25.25 0 00.25-.25V6h-2.75A1.75 1.75 0 0110 4.25V1.5H5.75a.25.25 0 00-.25.25v2.5a.75.75 0 01-1.5 0v-2.5zm7.5-.188V4.25c0 .138.112.25.25.25h2.688a.252.252 0 00-.011-.013l-2.914-2.914a.272.272 0 00-.013-.011zM5.72 6.72a.75.75 0 000 1.06l1.47 1.47-1.47 1.47a.75.75 0 101.06 1.06l2-2a.75.75 0 000-1.06l-2-2a.75.75 0 00-1.06 0zM3.28 7.78a.75.75 0 00-1.06-1.06l-2 2a.75.75 0 000 1.06l2 2a.75.75 0 001.06-1.06L1.81 9.25l1.47-1.47z"></path></svg>bib
         </a>
       
@@ -325,6 +497,11 @@
       </a>
     
   </div>
+  
+  <div id="rtc19_bib" class="bibtex noshow">
+    <pre id="rtc19_bib_pre" class="text-gray-light"></pre>
+  </div>
+  
 </div>
 
         </div>
@@ -338,6 +515,59 @@
           
           
 
+<style>
+  /*********************************
+   The list of publication items
+   *********************************/
+  /* The list of items */
+  .biblist { }
+  /* The item */
+  .biblist li { }
+  /* You can define custom styles for plstyle field here. */
+  /*************************************
+  The box that contain BibTeX code
+  *************************************/
+  div.noshow { display: none; }
+  div.bibtex {
+    margin-right: 0%;
+    margin-top: 1em;
+    margin-bottom: 0em;
+    border: 1px solid lightgray;
+    border-radius: 2px;
+    padding: 1em;
+  }
+  div.bibtex pre {overflow: auto;  width: 100%; padding: 0em 0em;}
+</style>
+
+<script type="text/javascript">
+  // Toggle Display of BibTeX
+  function toggleBibtex(articleid) {
+    var bib = document.getElementById(articleid + '_bib');
+    var bib_pre = document.getElementById(articleid + '_bib_pre');
+    if (bib) {
+
+      // get text in bib div
+      var client = new XMLHttpRequest();
+      client.open('GET', '/publications/' + articleid + '.bib');
+      client.onreadystatechange = function() {
+        bib_pre.innerText = client.responseText
+      }
+      client.send();
+
+      // show / no show
+      if(bib.className.indexOf('bibtex') != -1) {
+          bib.className.indexOf('noshow') == -1?bib.className = 'bibtex noshow':bib.className = 'bibtex';
+      }
+    } else {
+        return;
+    }
+  }
+</script>
+<script>
+  function getBibtex(articleid) {
+  }
+</script>
+
 <div class="height-full width-full text-left border border-gray-dark bg-gray-dark rounded-1 p-3">
   <div class="text-white text-bold ws-normal mb-2 f4">Deep Shape Matching</div>
   <div class="text-white ws-normal mb-2"><b>Radenović F.</b>, Tolias G., Chum O.</div>
@@ -350,7 +580,8 @@
         </a>
       
       
-        <a href="/publications/rtc18.bib" class="d-inline-block text-gray-light mr-3">
+        <!-- <a href="/publications/rtc18.bib" class="d-inline-block text-gray-light mr-3"> -->
+        <a href="javascript:toggleBibtex('rtc18')" class="d-inline-block text-gray-light mr-3">
           <svg height="16" class="octicon octicon-file-code mr-1" fill="#ffffff" aria-label="file-code" viewBox="0 0 16 16" version="1.1" width="16" role="img"><path fill-rule="evenodd" d="M4 1.75C4 .784 4.784 0 5.75 0h5.586c.464 0 .909.184 1.237.513l2.914 2.914c.329.328.513.773.513 1.237v8.586A1.75 1.75 0 0114.25 15h-9a.75.75 0 010-1.5h9a.25.25 0 00.25-.25V6h-2.75A1.75 1.75 0 0110 4.25V1.5H5.75a.25.25 0 00-.25.25v2.5a.75.75 0 01-1.5 0v-2.5zm7.5-.188V4.25c0 .138.112.25.25.25h2.688a.252.252 0 00-.011-.013l-2.914-2.914a.272.272 0 00-.013-.011zM5.72 6.72a.75.75 0 000 1.06l1.47 1.47-1.47 1.47a.75.75 0 101.06 1.06l2-2a.75.75 0 000-1.06l-2-2a.75.75 0 00-1.06 0zM3.28 7.78a.75.75 0 00-1.06-1.06l-2 2a.75.75 0 000 1.06l2 2a.75.75 0 001.06-1.06L1.81 9.25l1.47-1.47z"></path></svg>bib
         </a>
       
@@ -370,6 +601,11 @@
       </a>
     
   </div>
+  
+  <div id="rtc18_bib" class="bibtex noshow">
+    <pre id="rtc18_bib_pre" class="text-gray-light"></pre>
+  </div>
+  
 </div>
 
         </div>
@@ -379,6 +615,59 @@
         <div class="d-flex flex-items-center text-white">
           
           
+
+<style>
+  /*********************************
+   The list of publication items
+   *********************************/
+  /* The list of items */
+  .biblist { }
+  /* The item */
+  .biblist li { }
+  /* You can define custom styles for plstyle field here. */
+  /*************************************
+  The box that contain BibTeX code
+  *************************************/
+  div.noshow { display: none; }
+  div.bibtex {
+    margin-right: 0%;
+    margin-top: 1em;
+    margin-bottom: 0em;
+    border: 1px solid lightgray;
+    border-radius: 2px;
+    padding: 1em;
+  }
+  div.bibtex pre {overflow: auto;  width: 100%; padding: 0em 0em;}
+</style>
+
+<script type="text/javascript">
+  // Toggle Display of BibTeX
+  function toggleBibtex(articleid) {
+    var bib = document.getElementById(articleid + '_bib');
+    var bib_pre = document.getElementById(articleid + '_bib_pre');
+    if (bib) {
+
+      // get text in bib div
+      var client = new XMLHttpRequest();
+      client.open('GET', '/publications/' + articleid + '.bib');
+      client.onreadystatechange = function() {
+        bib_pre.innerText = client.responseText
+      }
+      client.send();
+
+      // show / no show
+      if(bib.className.indexOf('bibtex') != -1) {
+          bib.className.indexOf('noshow') == -1?bib.className = 'bibtex noshow':bib.className = 'bibtex';
+      }
+    } else {
+        return;
+    }
+  }
+</script>
+<script>
+  function getBibtex(articleid) {
+  }
+</script>
 
 <div class="height-full width-full text-left border border-gray-dark bg-gray-dark rounded-1 p-3">
   <div class="text-white text-bold ws-normal mb-2 f4">Revisiting Oxford and Paris: Large-Scale Image Retrieval Benchmarking</div>
@@ -392,7 +681,8 @@
         </a>
       
       
-        <a href="/publications/rit+18.bib" class="d-inline-block text-gray-light mr-3">
+        <!-- <a href="/publications/rit+18.bib" class="d-inline-block text-gray-light mr-3"> -->
+        <a href="javascript:toggleBibtex('rit+18')" class="d-inline-block text-gray-light mr-3">
           <svg height="16" class="octicon octicon-file-code mr-1" fill="#ffffff" aria-label="file-code" viewBox="0 0 16 16" version="1.1" width="16" role="img"><path fill-rule="evenodd" d="M4 1.75C4 .784 4.784 0 5.75 0h5.586c.464 0 .909.184 1.237.513l2.914 2.914c.329.328.513.773.513 1.237v8.586A1.75 1.75 0 0114.25 15h-9a.75.75 0 010-1.5h9a.25.25 0 00.25-.25V6h-2.75A1.75 1.75 0 0110 4.25V1.5H5.75a.25.25 0 00-.25.25v2.5a.75.75 0 01-1.5 0v-2.5zm7.5-.188V4.25c0 .138.112.25.25.25h2.688a.252.252 0 00-.011-.013l-2.914-2.914a.272.272 0 00-.013-.011zM5.72 6.72a.75.75 0 000 1.06l1.47 1.47-1.47 1.47a.75.75 0 101.06 1.06l2-2a.75.75 0 000-1.06l-2-2a.75.75 0 00-1.06 0zM3.28 7.78a.75.75 0 00-1.06-1.06l-2 2a.75.75 0 000 1.06l2 2a.75.75 0 001.06-1.06L1.81 9.25l1.47-1.47z"></path></svg>bib
         </a>
       
@@ -412,6 +702,11 @@
       </a>
     
   </div>
+  
+  <div id="rit+18_bib" class="bibtex noshow">
+    <pre id="rit+18_bib_pre" class="text-gray-light"></pre>
+  </div>
+  
 </div>
 
         </div>
@@ -421,6 +716,59 @@
         <div class="d-flex flex-items-center text-white">
           
           
+
+<style>
+  /*********************************
+   The list of publication items
+   *********************************/
+  /* The list of items */
+  .biblist { }
+  /* The item */
+  .biblist li { }
+  /* You can define custom styles for plstyle field here. */
+  /*************************************
+  The box that contain BibTeX code
+  *************************************/
+  div.noshow { display: none; }
+  div.bibtex {
+    margin-right: 0%;
+    margin-top: 1em;
+    margin-bottom: 0em;
+    border: 1px solid lightgray;
+    border-radius: 2px;
+    padding: 1em;
+  }
+  div.bibtex pre {overflow: auto;  width: 100%; padding: 0em 0em;}
+</style>
+
+<script type="text/javascript">
+  // Toggle Display of BibTeX
+  function toggleBibtex(articleid) {
+    var bib = document.getElementById(articleid + '_bib');
+    var bib_pre = document.getElementById(articleid + '_bib_pre');
+    if (bib) {
+
+      // get text in bib div
+      var client = new XMLHttpRequest();
+      client.open('GET', '/publications/' + articleid + '.bib');
+      client.onreadystatechange = function() {
+        bib_pre.innerText = client.responseText
+      }
+      client.send();
+
+      // show / no show
+      if(bib.className.indexOf('bibtex') != -1) {
+          bib.className.indexOf('noshow') == -1?bib.className = 'bibtex noshow':bib.className = 'bibtex';
+      }
+    } else {
+        return;
+    }
+  }
+</script>
+<script>
+  function getBibtex(articleid) {
+  }
+</script>
 
 <div class="height-full width-full text-left border border-gray-dark bg-gray-dark rounded-1 p-3">
   <div class="text-white text-bold ws-normal mb-2 f4">Repeatability Is Not Enough: Learning Affine Regions via Discriminability</div>
@@ -434,7 +782,8 @@
         </a>
       
       
-        <a href="/publications/mrm18.bib" class="d-inline-block text-gray-light mr-3">
+        <!-- <a href="/publications/mrm18.bib" class="d-inline-block text-gray-light mr-3"> -->
+        <a href="javascript:toggleBibtex('mrm18')" class="d-inline-block text-gray-light mr-3">
           <svg height="16" class="octicon octicon-file-code mr-1" fill="#ffffff" aria-label="file-code" viewBox="0 0 16 16" version="1.1" width="16" role="img"><path fill-rule="evenodd" d="M4 1.75C4 .784 4.784 0 5.75 0h5.586c.464 0 .909.184 1.237.513l2.914 2.914c.329.328.513.773.513 1.237v8.586A1.75 1.75 0 0114.25 15h-9a.75.75 0 010-1.5h9a.25.25 0 00.25-.25V6h-2.75A1.75 1.75 0 0110 4.25V1.5H5.75a.25.25 0 00-.25.25v2.5a.75.75 0 01-1.5 0v-2.5zm7.5-.188V4.25c0 .138.112.25.25.25h2.688a.252.252 0 00-.011-.013l-2.914-2.914a.272.272 0 00-.013-.011zM5.72 6.72a.75.75 0 000 1.06l1.47 1.47-1.47 1.47a.75.75 0 101.06 1.06l2-2a.75.75 0 000-1.06l-2-2a.75.75 0 00-1.06 0zM3.28 7.78a.75.75 0 00-1.06-1.06l-2 2a.75.75 0 000 1.06l2 2a.75.75 0 001.06-1.06L1.81 9.25l1.47-1.47z"></path></svg>bib
         </a>
       
@@ -454,6 +803,11 @@
       </a>
     
   </div>
+  
+  <div id="mrm18_bib" class="bibtex noshow">
+    <pre id="mrm18_bib_pre" class="text-gray-light"></pre>
+  </div>
+  
 </div>
 
         </div>
@@ -467,6 +821,59 @@
           
           
 
+<style>
+  /*********************************
+   The list of publication items
+   *********************************/
+  /* The list of items */
+  .biblist { }
+  /* The item */
+  .biblist li { }
+  /* You can define custom styles for plstyle field here. */
+  /*************************************
+  The box that contain BibTeX code
+  *************************************/
+  div.noshow { display: none; }
+  div.bibtex {
+    margin-right: 0%;
+    margin-top: 1em;
+    margin-bottom: 0em;
+    border: 1px solid lightgray;
+    border-radius: 2px;
+    padding: 1em;
+  }
+  div.bibtex pre {overflow: auto;  width: 100%; padding: 0em 0em;}
+</style>
+
+<script type="text/javascript">
+  // Toggle Display of BibTeX
+  function toggleBibtex(articleid) {
+    var bib = document.getElementById(articleid + '_bib');
+    var bib_pre = document.getElementById(articleid + '_bib_pre');
+    if (bib) {
+
+      // get text in bib div
+      var client = new XMLHttpRequest();
+      client.open('GET', '/publications/' + articleid + '.bib');
+      client.onreadystatechange = function() {
+        bib_pre.innerText = client.responseText
+      }
+      client.send();
+
+      // show / no show
+      if(bib.className.indexOf('bibtex') != -1) {
+          bib.className.indexOf('noshow') == -1?bib.className = 'bibtex noshow':bib.className = 'bibtex';
+      }
+    } else {
+        return;
+    }
+  }
+</script>
+<script>
+  function getBibtex(articleid) {
+  }
+</script>
+
 <div class="height-full width-full text-left border border-gray-dark bg-gray-dark rounded-1 p-3">
   <div class="text-white text-bold ws-normal mb-2 f4">Working hard to know your neighbor's margins: Local descriptor learning loss</div>
   <div class="text-white ws-normal mb-2">Mishchuk A., Mishkin D., <b>Radenović F.</b>, Matas J.</div>
@@ -479,7 +886,8 @@
         </a>
       
       
-        <a href="/publications/mmrm17.bib" class="d-inline-block text-gray-light mr-3">
+        <!-- <a href="/publications/mmrm17.bib" class="d-inline-block text-gray-light mr-3"> -->
+        <a href="javascript:toggleBibtex('mmrm17')" class="d-inline-block text-gray-light mr-3">
           <svg height="16" class="octicon octicon-file-code mr-1" fill="#ffffff" aria-label="file-code" viewBox="0 0 16 16" version="1.1" width="16" role="img"><path fill-rule="evenodd" d="M4 1.75C4 .784 4.784 0 5.75 0h5.586c.464 0 .909.184 1.237.513l2.914 2.914c.329.328.513.773.513 1.237v8.586A1.75 1.75 0 0114.25 15h-9a.75.75 0 010-1.5h9a.25.25 0 00.25-.25V6h-2.75A1.75 1.75 0 0110 4.25V1.5H5.75a.25.25 0 00-.25.25v2.5a.75.75 0 01-1.5 0v-2.5zm7.5-.188V4.25c0 .138.112.25.25.25h2.688a.252.252 0 00-.011-.013l-2.914-2.914a.272.272 0 00-.013-.011zM5.72 6.72a.75.75 0 000 1.06l1.47 1.47-1.47 1.47a.75.75 0 101.06 1.06l2-2a.75.75 0 000-1.06l-2-2a.75.75 0 00-1.06 0zM3.28 7.78a.75.75 0 00-1.06-1.06l-2 2a.75.75 0 000 1.06l2 2a.75.75 0 001.06-1.06L1.81 9.25l1.47-1.47z"></path></svg>bib
         </a>
       
@@ -499,6 +907,11 @@
       </a>
     
   </div>
+  
+  <div id="mmrm17_bib" class="bibtex noshow">
+    <pre id="mmrm17_bib_pre" class="text-gray-light"></pre>
+  </div>
+  
 </div>
 
         </div>
@@ -512,6 +925,59 @@
           
           
 
+<style>
+  /*********************************
+   The list of publication items
+   *********************************/
+  /* The list of items */
+  .biblist { }
+  /* The item */
+  .biblist li { }
+  /* You can define custom styles for plstyle field here. */
+  /*************************************
+  The box that contain BibTeX code
+  *************************************/
+  div.noshow { display: none; }
+  div.bibtex {
+    margin-right: 0%;
+    margin-top: 1em;
+    margin-bottom: 0em;
+    border: 1px solid lightgray;
+    border-radius: 2px;
+    padding: 1em;
+  }
+  div.bibtex pre {overflow: auto;  width: 100%; padding: 0em 0em;}
+</style>
+
+<script type="text/javascript">
+  // Toggle Display of BibTeX
+  function toggleBibtex(articleid) {
+    var bib = document.getElementById(articleid + '_bib');
+    var bib_pre = document.getElementById(articleid + '_bib_pre');
+    if (bib) {
+
+      // get text in bib div
+      var client = new XMLHttpRequest();
+      client.open('GET', '/publications/' + articleid + '.bib');
+      client.onreadystatechange = function() {
+        bib_pre.innerText = client.responseText
+      }
+      client.send();
+
+      // show / no show
+      if(bib.className.indexOf('bibtex') != -1) {
+          bib.className.indexOf('noshow') == -1?bib.className = 'bibtex noshow':bib.className = 'bibtex';
+      }
+    } else {
+        return;
+    }
+  }
+</script>
+<script>
+  function getBibtex(articleid) {
+  }
+</script>
+
 <div class="height-full width-full text-left border border-gray-dark bg-gray-dark rounded-1 p-3">
   <div class="text-white text-bold ws-normal mb-2 f4">CNN Image Retrieval Learns from BoW: Unsupervised Fine-Tuning with Hard Examples</div>
   <div class="text-white ws-normal mb-2"><b>Radenović F.</b>, Tolias G., Chum O.</div>
@@ -524,7 +990,8 @@
         </a>
       
       
-        <a href="/publications/rtc16.bib" class="d-inline-block text-gray-light mr-3">
+        <!-- <a href="/publications/rtc16.bib" class="d-inline-block text-gray-light mr-3"> -->
+        <a href="javascript:toggleBibtex('rtc16')" class="d-inline-block text-gray-light mr-3">
           <svg height="16" class="octicon octicon-file-code mr-1" fill="#ffffff" aria-label="file-code" viewBox="0 0 16 16" version="1.1" width="16" role="img"><path fill-rule="evenodd" d="M4 1.75C4 .784 4.784 0 5.75 0h5.586c.464 0 .909.184 1.237.513l2.914 2.914c.329.328.513.773.513 1.237v8.586A1.75 1.75 0 0114.25 15h-9a.75.75 0 010-1.5h9a.25.25 0 00.25-.25V6h-2.75A1.75 1.75 0 0110 4.25V1.5H5.75a.25.25 0 00-.25.25v2.5a.75.75 0 01-1.5 0v-2.5zm7.5-.188V4.25c0 .138.112.25.25.25h2.688a.252.252 0 00-.011-.013l-2.914-2.914a.272.272 0 00-.013-.011zM5.72 6.72a.75.75 0 000 1.06l1.47 1.47-1.47 1.47a.75.75 0 101.06 1.06l2-2a.75.75 0 000-1.06l-2-2a.75.75 0 00-1.06 0zM3.28 7.78a.75.75 0 00-1.06-1.06l-2 2a.75.75 0 000 1.06l2 2a.75.75 0 001.06-1.06L1.81 9.25l1.47-1.47z"></path></svg>bib
         </a>
       
@@ -552,6 +1019,11 @@
       </a>
     
   </div>
+  
+  <div id="rtc16_bib" class="bibtex noshow">
+    <pre id="rtc16_bib_pre" class="text-gray-light"></pre>
+  </div>
+  
 </div>
 
         </div>
@@ -561,6 +1033,59 @@
         <div class="d-flex flex-items-center text-white">
           
           
+
+<style>
+  /*********************************
+   The list of publication items
+   *********************************/
+  /* The list of items */
+  .biblist { }
+  /* The item */
+  .biblist li { }
+  /* You can define custom styles for plstyle field here. */
+  /*************************************
+  The box that contain BibTeX code
+  *************************************/
+  div.noshow { display: none; }
+  div.bibtex {
+    margin-right: 0%;
+    margin-top: 1em;
+    margin-bottom: 0em;
+    border: 1px solid lightgray;
+    border-radius: 2px;
+    padding: 1em;
+  }
+  div.bibtex pre {overflow: auto;  width: 100%; padding: 0em 0em;}
+</style>
+
+<script type="text/javascript">
+  // Toggle Display of BibTeX
+  function toggleBibtex(articleid) {
+    var bib = document.getElementById(articleid + '_bib');
+    var bib_pre = document.getElementById(articleid + '_bib_pre');
+    if (bib) {
+
+      // get text in bib div
+      var client = new XMLHttpRequest();
+      client.open('GET', '/publications/' + articleid + '.bib');
+      client.onreadystatechange = function() {
+        bib_pre.innerText = client.responseText
+      }
+      client.send();
+
+      // show / no show
+      if(bib.className.indexOf('bibtex') != -1) {
+          bib.className.indexOf('noshow') == -1?bib.className = 'bibtex noshow':bib.className = 'bibtex';
+      }
+    } else {
+        return;
+    }
+  }
+</script>
+<script>
+  function getBibtex(articleid) {
+  }
+</script>
 
 <div class="height-full width-full text-left border border-gray-dark bg-gray-dark rounded-1 p-3">
   <div class="text-white text-bold ws-normal mb-2 f4">From Dusk till Dawn: Modeling in the Dark</div>
@@ -574,7 +1099,8 @@
         </a>
       
       
-        <a href="/publications/rsj+16.bib" class="d-inline-block text-gray-light mr-3">
+        <!-- <a href="/publications/rsj+16.bib" class="d-inline-block text-gray-light mr-3"> -->
+        <a href="javascript:toggleBibtex('rsj+16')" class="d-inline-block text-gray-light mr-3">
           <svg height="16" class="octicon octicon-file-code mr-1" fill="#ffffff" aria-label="file-code" viewBox="0 0 16 16" version="1.1" width="16" role="img"><path fill-rule="evenodd" d="M4 1.75C4 .784 4.784 0 5.75 0h5.586c.464 0 .909.184 1.237.513l2.914 2.914c.329.328.513.773.513 1.237v8.586A1.75 1.75 0 0114.25 15h-9a.75.75 0 010-1.5h9a.25.25 0 00.25-.25V6h-2.75A1.75 1.75 0 0110 4.25V1.5H5.75a.25.25 0 00-.25.25v2.5a.75.75 0 01-1.5 0v-2.5zm7.5-.188V4.25c0 .138.112.25.25.25h2.688a.252.252 0 00-.011-.013l-2.914-2.914a.272.272 0 00-.013-.011zM5.72 6.72a.75.75 0 000 1.06l1.47 1.47-1.47 1.47a.75.75 0 101.06 1.06l2-2a.75.75 0 000-1.06l-2-2a.75.75 0 00-1.06 0zM3.28 7.78a.75.75 0 00-1.06-1.06l-2 2a.75.75 0 000 1.06l2 2a.75.75 0 001.06-1.06L1.81 9.25l1.47-1.47z"></path></svg>bib
         </a>
       
@@ -598,6 +1124,11 @@
     
     
   </div>
+  
+  <div id="rsj+16_bib" class="bibtex noshow">
+    <pre id="rsj+16_bib_pre" class="text-gray-light"></pre>
+  </div>
+  
 </div>
 
         </div>
@@ -611,6 +1142,59 @@
           
           
 
+<style>
+  /*********************************
+   The list of publication items
+   *********************************/
+  /* The list of items */
+  .biblist { }
+  /* The item */
+  .biblist li { }
+  /* You can define custom styles for plstyle field here. */
+  /*************************************
+  The box that contain BibTeX code
+  *************************************/
+  div.noshow { display: none; }
+  div.bibtex {
+    margin-right: 0%;
+    margin-top: 1em;
+    margin-bottom: 0em;
+    border: 1px solid lightgray;
+    border-radius: 2px;
+    padding: 1em;
+  }
+  div.bibtex pre {overflow: auto;  width: 100%; padding: 0em 0em;}
+</style>
+
+<script type="text/javascript">
+  // Toggle Display of BibTeX
+  function toggleBibtex(articleid) {
+    var bib = document.getElementById(articleid + '_bib');
+    var bib_pre = document.getElementById(articleid + '_bib_pre');
+    if (bib) {
+
+      // get text in bib div
+      var client = new XMLHttpRequest();
+      client.open('GET', '/publications/' + articleid + '.bib');
+      client.onreadystatechange = function() {
+        bib_pre.innerText = client.responseText
+      }
+      client.send();
+
+      // show / no show
+      if(bib.className.indexOf('bibtex') != -1) {
+          bib.className.indexOf('noshow') == -1?bib.className = 'bibtex noshow':bib.className = 'bibtex';
+      }
+    } else {
+        return;
+    }
+  }
+</script>
+<script>
+  function getBibtex(articleid) {
+  }
+</script>
+
 <div class="height-full width-full text-left border border-gray-dark bg-gray-dark rounded-1 p-3">
   <div class="text-white text-bold ws-normal mb-2 f4">Multiple Measurements and Joint Dimensionality Reduction for Large Scale Image Search with Short Vectors</div>
   <div class="text-white ws-normal mb-2"><b>Radenović F.</b>, Jégou H., Chum O.</div>
@@ -623,7 +1207,8 @@
         </a>
       
       
-        <a href="/publications/rjc15.bib" class="d-inline-block text-gray-light mr-3">
+        <!-- <a href="/publications/rjc15.bib" class="d-inline-block text-gray-light mr-3"> -->
+        <a href="javascript:toggleBibtex('rjc15')" class="d-inline-block text-gray-light mr-3">
           <svg height="16" class="octicon octicon-file-code mr-1" fill="#ffffff" aria-label="file-code" viewBox="0 0 16 16" version="1.1" width="16" role="img"><path fill-rule="evenodd" d="M4 1.75C4 .784 4.784 0 5.75 0h5.586c.464 0 .909.184 1.237.513l2.914 2.914c.329.328.513.773.513 1.237v8.586A1.75 1.75 0 0114.25 15h-9a.75.75 0 010-1.5h9a.25.25 0 00.25-.25V6h-2.75A1.75 1.75 0 0110 4.25V1.5H5.75a.25.25 0 00-.25.25v2.5a.75.75 0 01-1.5 0v-2.5zm7.5-.188V4.25c0 .138.112.25.25.25h2.688a.252.252 0 00-.011-.013l-2.914-2.914a.272.272 0 00-.013-.011zM5.72 6.72a.75.75 0 000 1.06l1.47 1.47-1.47 1.47a.75.75 0 101.06 1.06l2-2a.75.75 0 000-1.06l-2-2a.75.75 0 00-1.06 0zM3.28 7.78a.75.75 0 00-1.06-1.06l-2 2a.75.75 0 000 1.06l2 2a.75.75 0 001.06-1.06L1.81 9.25l1.47-1.47z"></path></svg>bib
         </a>
       
@@ -643,6 +1228,11 @@
     
     
   </div>
+  
+  <div id="rjc15_bib" class="bibtex noshow">
+    <pre id="rjc15_bib_pre" class="text-gray-light"></pre>
+  </div>
+  
 </div>
 
         </div>
@@ -652,6 +1242,59 @@
         <div class="d-flex flex-items-center text-white">
           
           
+
+<style>
+  /*********************************
+   The list of publication items
+   *********************************/
+  /* The list of items */
+  .biblist { }
+  /* The item */
+  .biblist li { }
+  /* You can define custom styles for plstyle field here. */
+  /*************************************
+  The box that contain BibTeX code
+  *************************************/
+  div.noshow { display: none; }
+  div.bibtex {
+    margin-right: 0%;
+    margin-top: 1em;
+    margin-bottom: 0em;
+    border: 1px solid lightgray;
+    border-radius: 2px;
+    padding: 1em;
+  }
+  div.bibtex pre {overflow: auto;  width: 100%; padding: 0em 0em;}
+</style>
+
+<script type="text/javascript">
+  // Toggle Display of BibTeX
+  function toggleBibtex(articleid) {
+    var bib = document.getElementById(articleid + '_bib');
+    var bib_pre = document.getElementById(articleid + '_bib_pre');
+    if (bib) {
+
+      // get text in bib div
+      var client = new XMLHttpRequest();
+      client.open('GET', '/publications/' + articleid + '.bib');
+      client.onreadystatechange = function() {
+        bib_pre.innerText = client.responseText
+      }
+      client.send();
+
+      // show / no show
+      if(bib.className.indexOf('bibtex') != -1) {
+          bib.className.indexOf('noshow') == -1?bib.className = 'bibtex noshow':bib.className = 'bibtex';
+      }
+    } else {
+        return;
+    }
+  }
+</script>
+<script>
+  function getBibtex(articleid) {
+  }
+</script>
 
 <div class="height-full width-full text-left border border-gray-dark bg-gray-dark rounded-1 p-3">
   <div class="text-white text-bold ws-normal mb-2 f4">From Single Image Query to Detailed 3D Reconstruction</div>
@@ -665,7 +1308,8 @@
         </a>
       
       
-        <a href="/publications/srcf15.bib" class="d-inline-block text-gray-light mr-3">
+        <!-- <a href="/publications/srcf15.bib" class="d-inline-block text-gray-light mr-3"> -->
+        <a href="javascript:toggleBibtex('srcf15')" class="d-inline-block text-gray-light mr-3">
           <svg height="16" class="octicon octicon-file-code mr-1" fill="#ffffff" aria-label="file-code" viewBox="0 0 16 16" version="1.1" width="16" role="img"><path fill-rule="evenodd" d="M4 1.75C4 .784 4.784 0 5.75 0h5.586c.464 0 .909.184 1.237.513l2.914 2.914c.329.328.513.773.513 1.237v8.586A1.75 1.75 0 0114.25 15h-9a.75.75 0 010-1.5h9a.25.25 0 00.25-.25V6h-2.75A1.75 1.75 0 0110 4.25V1.5H5.75a.25.25 0 00-.25.25v2.5a.75.75 0 01-1.5 0v-2.5zm7.5-.188V4.25c0 .138.112.25.25.25h2.688a.252.252 0 00-.011-.013l-2.914-2.914a.272.272 0 00-.013-.011zM5.72 6.72a.75.75 0 000 1.06l1.47 1.47-1.47 1.47a.75.75 0 101.06 1.06l2-2a.75.75 0 000-1.06l-2-2a.75.75 0 00-1.06 0zM3.28 7.78a.75.75 0 00-1.06-1.06l-2 2a.75.75 0 000 1.06l2 2a.75.75 0 001.06-1.06L1.81 9.25l1.47-1.47z"></path></svg>bib
         </a>
       
@@ -685,6 +1329,11 @@
     
     
   </div>
+  
+  <div id="srcf15_bib" class="bibtex noshow">
+    <pre id="srcf15_bib_pre" class="text-gray-light"></pre>
+  </div>
+  
 </div>
 
         </div>
@@ -694,6 +1343,59 @@
         <div class="d-flex flex-items-center text-white">
           
           
+
+<style>
+  /*********************************
+   The list of publication items
+   *********************************/
+  /* The list of items */
+  .biblist { }
+  /* The item */
+  .biblist li { }
+  /* You can define custom styles for plstyle field here. */
+  /*************************************
+  The box that contain BibTeX code
+  *************************************/
+  div.noshow { display: none; }
+  div.bibtex {
+    margin-right: 0%;
+    margin-top: 1em;
+    margin-bottom: 0em;
+    border: 1px solid lightgray;
+    border-radius: 2px;
+    padding: 1em;
+  }
+  div.bibtex pre {overflow: auto;  width: 100%; padding: 0em 0em;}
+</style>
+
+<script type="text/javascript">
+  // Toggle Display of BibTeX
+  function toggleBibtex(articleid) {
+    var bib = document.getElementById(articleid + '_bib');
+    var bib_pre = document.getElementById(articleid + '_bib_pre');
+    if (bib) {
+
+      // get text in bib div
+      var client = new XMLHttpRequest();
+      client.open('GET', '/publications/' + articleid + '.bib');
+      client.onreadystatechange = function() {
+        bib_pre.innerText = client.responseText
+      }
+      client.send();
+
+      // show / no show
+      if(bib.className.indexOf('bibtex') != -1) {
+          bib.className.indexOf('noshow') == -1?bib.className = 'bibtex noshow':bib.className = 'bibtex';
+      }
+    } else {
+        return;
+    }
+  }
+</script>
+<script>
+  function getBibtex(articleid) {
+  }
+</script>
 
 <div class="height-full width-full text-left border border-gray-dark bg-gray-dark rounded-1 p-3">
   <div class="text-white text-bold ws-normal mb-2 f4">Hyperpoints and Fine Vocabularies for Large-Scale Location Recognition</div>
@@ -707,7 +1409,8 @@
         </a>
       
       
-        <a href="/publications/shr+15.bib" class="d-inline-block text-gray-light mr-3">
+        <!-- <a href="/publications/shr+15.bib" class="d-inline-block text-gray-light mr-3"> -->
+        <a href="javascript:toggleBibtex('shr+15')" class="d-inline-block text-gray-light mr-3">
           <svg height="16" class="octicon octicon-file-code mr-1" fill="#ffffff" aria-label="file-code" viewBox="0 0 16 16" version="1.1" width="16" role="img"><path fill-rule="evenodd" d="M4 1.75C4 .784 4.784 0 5.75 0h5.586c.464 0 .909.184 1.237.513l2.914 2.914c.329.328.513.773.513 1.237v8.586A1.75 1.75 0 0114.25 15h-9a.75.75 0 010-1.5h9a.25.25 0 00.25-.25V6h-2.75A1.75 1.75 0 0110 4.25V1.5H5.75a.25.25 0 00-.25.25v2.5a.75.75 0 01-1.5 0v-2.5zm7.5-.188V4.25c0 .138.112.25.25.25h2.688a.252.252 0 00-.011-.013l-2.914-2.914a.272.272 0 00-.013-.011zM5.72 6.72a.75.75 0 000 1.06l1.47 1.47-1.47 1.47a.75.75 0 101.06 1.06l2-2a.75.75 0 000-1.06l-2-2a.75.75 0 00-1.06 0zM3.28 7.78a.75.75 0 00-1.06-1.06l-2 2a.75.75 0 000 1.06l2 2a.75.75 0 001.06-1.06L1.81 9.25l1.47-1.47z"></path></svg>bib
         </a>
       
@@ -723,6 +1426,11 @@
     
     
   </div>
+  
+  <div id="shr+15_bib" class="bibtex noshow">
+    <pre id="shr+15_bib_pre" class="text-gray-light"></pre>
+  </div>
+  
 </div>
 
         </div>
@@ -732,6 +1440,59 @@
         <div class="d-flex flex-items-center text-white">
           
           
+
+<style>
+  /*********************************
+   The list of publication items
+   *********************************/
+  /* The list of items */
+  .biblist { }
+  /* The item */
+  .biblist li { }
+  /* You can define custom styles for plstyle field here. */
+  /*************************************
+  The box that contain BibTeX code
+  *************************************/
+  div.noshow { display: none; }
+  div.bibtex {
+    margin-right: 0%;
+    margin-top: 1em;
+    margin-bottom: 0em;
+    border: 1px solid lightgray;
+    border-radius: 2px;
+    padding: 1em;
+  }
+  div.bibtex pre {overflow: auto;  width: 100%; padding: 0em 0em;}
+</style>
+
+<script type="text/javascript">
+  // Toggle Display of BibTeX
+  function toggleBibtex(articleid) {
+    var bib = document.getElementById(articleid + '_bib');
+    var bib_pre = document.getElementById(articleid + '_bib_pre');
+    if (bib) {
+
+      // get text in bib div
+      var client = new XMLHttpRequest();
+      client.open('GET', '/publications/' + articleid + '.bib');
+      client.onreadystatechange = function() {
+        bib_pre.innerText = client.responseText
+      }
+      client.send();
+
+      // show / no show
+      if(bib.className.indexOf('bibtex') != -1) {
+          bib.className.indexOf('noshow') == -1?bib.className = 'bibtex noshow':bib.className = 'bibtex';
+      }
+    } else {
+        return;
+    }
+  }
+</script>
+<script>
+  function getBibtex(articleid) {
+  }
+</script>
 
 <div class="height-full width-full text-left border border-gray-dark bg-gray-dark rounded-1 p-3">
   <div class="text-white text-bold ws-normal mb-2 f4">Camera Elevation Estimation from a Single Mountain Landscape Photograph</div>
@@ -745,7 +1506,8 @@
         </a>
       
       
-        <a href="/publications/cvh+15.bib" class="d-inline-block text-gray-light mr-3">
+        <!-- <a href="/publications/cvh+15.bib" class="d-inline-block text-gray-light mr-3"> -->
+        <a href="javascript:toggleBibtex('cvh+15')" class="d-inline-block text-gray-light mr-3">
           <svg height="16" class="octicon octicon-file-code mr-1" fill="#ffffff" aria-label="file-code" viewBox="0 0 16 16" version="1.1" width="16" role="img"><path fill-rule="evenodd" d="M4 1.75C4 .784 4.784 0 5.75 0h5.586c.464 0 .909.184 1.237.513l2.914 2.914c.329.328.513.773.513 1.237v8.586A1.75 1.75 0 0114.25 15h-9a.75.75 0 010-1.5h9a.25.25 0 00.25-.25V6h-2.75A1.75 1.75 0 0110 4.25V1.5H5.75a.25.25 0 00-.25.25v2.5a.75.75 0 01-1.5 0v-2.5zm7.5-.188V4.25c0 .138.112.25.25.25h2.688a.252.252 0 00-.011-.013l-2.914-2.914a.272.272 0 00-.013-.011zM5.72 6.72a.75.75 0 000 1.06l1.47 1.47-1.47 1.47a.75.75 0 101.06 1.06l2-2a.75.75 0 000-1.06l-2-2a.75.75 0 00-1.06 0zM3.28 7.78a.75.75 0 00-1.06-1.06l-2 2a.75.75 0 000 1.06l2 2a.75.75 0 001.06-1.06L1.81 9.25l1.47-1.47z"></path></svg>bib
         </a>
       
@@ -761,6 +1523,11 @@
     
     
   </div>
+  
+  <div id="cvh+15_bib" class="bibtex noshow">
+    <pre id="cvh+15_bib_pre" class="text-gray-light"></pre>
+  </div>
+  
 </div>
 
         </div>
@@ -774,6 +1541,59 @@
           
           
 
+<style>
+  /*********************************
+   The list of publication items
+   *********************************/
+  /* The list of items */
+  .biblist { }
+  /* The item */
+  .biblist li { }
+  /* You can define custom styles for plstyle field here. */
+  /*************************************
+  The box that contain BibTeX code
+  *************************************/
+  div.noshow { display: none; }
+  div.bibtex {
+    margin-right: 0%;
+    margin-top: 1em;
+    margin-bottom: 0em;
+    border: 1px solid lightgray;
+    border-radius: 2px;
+    padding: 1em;
+  }
+  div.bibtex pre {overflow: auto;  width: 100%; padding: 0em 0em;}
+</style>
+
+<script type="text/javascript">
+  // Toggle Display of BibTeX
+  function toggleBibtex(articleid) {
+    var bib = document.getElementById(articleid + '_bib');
+    var bib_pre = document.getElementById(articleid + '_bib_pre');
+    if (bib) {
+
+      // get text in bib div
+      var client = new XMLHttpRequest();
+      client.open('GET', '/publications/' + articleid + '.bib');
+      client.onreadystatechange = function() {
+        bib_pre.innerText = client.responseText
+      }
+      client.send();
+
+      // show / no show
+      if(bib.className.indexOf('bibtex') != -1) {
+          bib.className.indexOf('noshow') == -1?bib.className = 'bibtex noshow':bib.className = 'bibtex';
+      }
+    } else {
+        return;
+    }
+  }
+</script>
+<script>
+  function getBibtex(articleid) {
+  }
+</script>
+
 <div class="height-full width-full text-left border border-gray-dark bg-gray-dark rounded-1 p-3">
   <div class="text-white text-bold ws-normal mb-2 f4">Efficient Image Detail Mining</div>
   <div class="text-white ws-normal mb-2">Mikulík A., <b>Radenović F.</b>, Chum O., Matas J.</div>
@@ -786,7 +1606,8 @@
         </a>
       
       
-        <a href="/publications/mrcm14.bib" class="d-inline-block text-gray-light mr-3">
+        <!-- <a href="/publications/mrcm14.bib" class="d-inline-block text-gray-light mr-3"> -->
+        <a href="javascript:toggleBibtex('mrcm14')" class="d-inline-block text-gray-light mr-3">
           <svg height="16" class="octicon octicon-file-code mr-1" fill="#ffffff" aria-label="file-code" viewBox="0 0 16 16" version="1.1" width="16" role="img"><path fill-rule="evenodd" d="M4 1.75C4 .784 4.784 0 5.75 0h5.586c.464 0 .909.184 1.237.513l2.914 2.914c.329.328.513.773.513 1.237v8.586A1.75 1.75 0 0114.25 15h-9a.75.75 0 010-1.5h9a.25.25 0 00.25-.25V6h-2.75A1.75 1.75 0 0110 4.25V1.5H5.75a.25.25 0 00-.25.25v2.5a.75.75 0 01-1.5 0v-2.5zm7.5-.188V4.25c0 .138.112.25.25.25h2.688a.252.252 0 00-.011-.013l-2.914-2.914a.272.272 0 00-.013-.011zM5.72 6.72a.75.75 0 000 1.06l1.47 1.47-1.47 1.47a.75.75 0 101.06 1.06l2-2a.75.75 0 000-1.06l-2-2a.75.75 0 00-1.06 0zM3.28 7.78a.75.75 0 00-1.06-1.06l-2 2a.75.75 0 000 1.06l2 2a.75.75 0 001.06-1.06L1.81 9.25l1.47-1.47z"></path></svg>bib
         </a>
       
@@ -802,6 +1623,11 @@
     
     
   </div>
+  
+  <div id="mrcm14_bib" class="bibtex noshow">
+    <pre id="mrcm14_bib_pre" class="text-gray-light"></pre>
+  </div>
+  
 </div>
 
         </div>
@@ -815,6 +1641,59 @@
           
           
 
+<style>
+  /*********************************
+   The list of publication items
+   *********************************/
+  /* The list of items */
+  .biblist { }
+  /* The item */
+  .biblist li { }
+  /* You can define custom styles for plstyle field here. */
+  /*************************************
+  The box that contain BibTeX code
+  *************************************/
+  div.noshow { display: none; }
+  div.bibtex {
+    margin-right: 0%;
+    margin-top: 1em;
+    margin-bottom: 0em;
+    border: 1px solid lightgray;
+    border-radius: 2px;
+    padding: 1em;
+  }
+  div.bibtex pre {overflow: auto;  width: 100%; padding: 0em 0em;}
+</style>
+
+<script type="text/javascript">
+  // Toggle Display of BibTeX
+  function toggleBibtex(articleid) {
+    var bib = document.getElementById(articleid + '_bib');
+    var bib_pre = document.getElementById(articleid + '_bib_pre');
+    if (bib) {
+
+      // get text in bib div
+      var client = new XMLHttpRequest();
+      client.open('GET', '/publications/' + articleid + '.bib');
+      client.onreadystatechange = function() {
+        bib_pre.innerText = client.responseText
+      }
+      client.send();
+
+      // show / no show
+      if(bib.className.indexOf('bibtex') != -1) {
+          bib.className.indexOf('noshow') == -1?bib.className = 'bibtex noshow':bib.className = 'bibtex';
+      }
+    } else {
+        return;
+    }
+  }
+</script>
+<script>
+  function getBibtex(articleid) {
+  }
+</script>
+
 <div class="height-full width-full text-left border border-gray-dark bg-gray-dark rounded-1 p-3">
   <div class="text-white text-bold ws-normal mb-2 f4">Genetic algorithm for rigid body reconstruction after micro-Doppler removal in the radar imaging analysis</div>
   <div class="text-white ws-normal mb-2">Stanković L., Popović-Bugarin V., <b>Radenović F.</b></div>
@@ -827,7 +1706,8 @@
         </a>
       
       
-        <a href="/publications/spr13.bib" class="d-inline-block text-gray-light mr-3">
+        <!-- <a href="/publications/spr13.bib" class="d-inline-block text-gray-light mr-3"> -->
+        <a href="javascript:toggleBibtex('spr13')" class="d-inline-block text-gray-light mr-3">
           <svg height="16" class="octicon octicon-file-code mr-1" fill="#ffffff" aria-label="file-code" viewBox="0 0 16 16" version="1.1" width="16" role="img"><path fill-rule="evenodd" d="M4 1.75C4 .784 4.784 0 5.75 0h5.586c.464 0 .909.184 1.237.513l2.914 2.914c.329.328.513.773.513 1.237v8.586A1.75 1.75 0 0114.25 15h-9a.75.75 0 010-1.5h9a.25.25 0 00.25-.25V6h-2.75A1.75 1.75 0 0110 4.25V1.5H5.75a.25.25 0 00-.25.25v2.5a.75.75 0 01-1.5 0v-2.5zm7.5-.188V4.25c0 .138.112.25.25.25h2.688a.252.252 0 00-.011-.013l-2.914-2.914a.272.272 0 00-.013-.011zM5.72 6.72a.75.75 0 000 1.06l1.47 1.47-1.47 1.47a.75.75 0 101.06 1.06l2-2a.75.75 0 000-1.06l-2-2a.75.75 0 00-1.06 0zM3.28 7.78a.75.75 0 00-1.06-1.06l-2 2a.75.75 0 000 1.06l2 2a.75.75 0 001.06-1.06L1.81 9.25l1.47-1.47z"></path></svg>bib
         </a>
       
@@ -843,6 +1723,11 @@
     
     
   </div>
+  
+  <div id="spr13_bib" class="bibtex noshow">
+    <pre id="spr13_bib_pre" class="text-gray-light"></pre>
+  </div>
+  
 </div>
 
         </div>
@@ -852,6 +1737,59 @@
         <div class="d-flex flex-items-center text-white">
           
           
+
+<style>
+  /*********************************
+   The list of publication items
+   *********************************/
+  /* The list of items */
+  .biblist { }
+  /* The item */
+  .biblist li { }
+  /* You can define custom styles for plstyle field here. */
+  /*************************************
+  The box that contain BibTeX code
+  *************************************/
+  div.noshow { display: none; }
+  div.bibtex {
+    margin-right: 0%;
+    margin-top: 1em;
+    margin-bottom: 0em;
+    border: 1px solid lightgray;
+    border-radius: 2px;
+    padding: 1em;
+  }
+  div.bibtex pre {overflow: auto;  width: 100%; padding: 0em 0em;}
+</style>
+
+<script type="text/javascript">
+  // Toggle Display of BibTeX
+  function toggleBibtex(articleid) {
+    var bib = document.getElementById(articleid + '_bib');
+    var bib_pre = document.getElementById(articleid + '_bib_pre');
+    if (bib) {
+
+      // get text in bib div
+      var client = new XMLHttpRequest();
+      client.open('GET', '/publications/' + articleid + '.bib');
+      client.onreadystatechange = function() {
+        bib_pre.innerText = client.responseText
+      }
+      client.send();
+
+      // show / no show
+      if(bib.className.indexOf('bibtex') != -1) {
+          bib.className.indexOf('noshow') == -1?bib.className = 'bibtex noshow':bib.className = 'bibtex';
+      }
+    } else {
+        return;
+    }
+  }
+</script>
+<script>
+  function getBibtex(articleid) {
+  }
+</script>
 
 <div class="height-full width-full text-left border border-gray-dark bg-gray-dark rounded-1 p-3">
   <div class="text-white text-bold ws-normal mb-2 f4">Analytical Rigid Body Reconstruction after Micro-Doppler Removal</div>
@@ -865,7 +1803,8 @@
         </a>
       
       
-        <a href="/publications/prs13.bib" class="d-inline-block text-gray-light mr-3">
+        <!-- <a href="/publications/prs13.bib" class="d-inline-block text-gray-light mr-3"> -->
+        <a href="javascript:toggleBibtex('prs13')" class="d-inline-block text-gray-light mr-3">
           <svg height="16" class="octicon octicon-file-code mr-1" fill="#ffffff" aria-label="file-code" viewBox="0 0 16 16" version="1.1" width="16" role="img"><path fill-rule="evenodd" d="M4 1.75C4 .784 4.784 0 5.75 0h5.586c.464 0 .909.184 1.237.513l2.914 2.914c.329.328.513.773.513 1.237v8.586A1.75 1.75 0 0114.25 15h-9a.75.75 0 010-1.5h9a.25.25 0 00.25-.25V6h-2.75A1.75 1.75 0 0110 4.25V1.5H5.75a.25.25 0 00-.25.25v2.5a.75.75 0 01-1.5 0v-2.5zm7.5-.188V4.25c0 .138.112.25.25.25h2.688a.252.252 0 00-.011-.013l-2.914-2.914a.272.272 0 00-.013-.011zM5.72 6.72a.75.75 0 000 1.06l1.47 1.47-1.47 1.47a.75.75 0 101.06 1.06l2-2a.75.75 0 000-1.06l-2-2a.75.75 0 00-1.06 0zM3.28 7.78a.75.75 0 00-1.06-1.06l-2 2a.75.75 0 000 1.06l2 2a.75.75 0 001.06-1.06L1.81 9.25l1.47-1.47z"></path></svg>bib
         </a>
       
@@ -881,6 +1820,11 @@
     
     
   </div>
+  
+  <div id="prs13_bib" class="bibtex noshow">
+    <pre id="prs13_bib_pre" class="text-gray-light"></pre>
+  </div>
+  
 </div>
 
         </div>
