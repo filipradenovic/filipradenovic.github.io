@@ -13,6 +13,10 @@
       {% include news.html %}
     </div>
 
+    <div class="my-6">
+      {% include awards.html %}
+    </div>
+
     {% if site.topics %}
       <div class="my-6">
         {% include interests.html %}
@@ -54,6 +58,8 @@
         {% endunless %}
 
         {% include news.html %}
+
+        {% include awards.html %}
 
         {% if site.topics %}
           {% include interests.html %}

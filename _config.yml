@@ -63,6 +63,18 @@ updates:
     - date: '2018-04-01'
       content: 'Large-scale image retrieval benchmarking <a class="text-white text-underline link-hover-gray-extra-light" href="http://cmp.felk.cvut.cz/~radenfil/publications/Radenovic-CVPR18.pdf">paper</a> accepted to CVPR as poster. <a class="text-white text-underline link-hover-gray-extra-light" href="http://cmp.felk.cvut.cz/revisitop/">Code and data</a> available.'
 
+awards:
+  - reviewer
+  - cski19
+  - feectu19
+  # - cvww18
+  - ucg12
+  - ikcg12
+  - epcg11
+  - podgorica10
+  - canu10
+  - etfucg
+
 publications:
   - year: 2019
     pubs:
