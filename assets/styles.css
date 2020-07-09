@@ -317,6 +317,9 @@ html {
   border-bottom-style: solid;
   padding-bottom: 5px; }
 
+.text-gray-extra-light {
+  color: #959da5 !important; }
+
 @media (min-width: 768px) {
   #masthead {
     position: fixed;
