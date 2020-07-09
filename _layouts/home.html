@@ -17,6 +17,10 @@
       {% include awards.html %}
     </div>
 
+    <div class="my-6">
+      {% include talks.html %}
+    </div>
+
     {% if site.topics %}
       <div class="my-6">
         {% include interests.html %}
@@ -43,7 +47,7 @@
 
         <div class="f4 {% if site.style == 'dark' %}text-white{% endif %} mb-6">
           {{ content }}
-          <p>I am a research scientist at <a href="https://ai.facebook.com" class="text-underline {% if site.style == 'dark' %}text-white link-hover-gray-extra-light{% endif %}">Facebook AI</a> in Menlo Park, California.</p>
+          <p>I am a Research Scientist at <a href="https://ai.facebook.com" class="text-underline {% if site.style == 'dark' %}text-white link-hover-gray-extra-light{% endif %}">Facebook AI</a> in Menlo Park, California.</p>
           <p>
           I obtained my PhD degree under the supervision of <a href="http://cmp.felk.cvut.cz/~chum" class="text-underline {% if site.style == 'dark' %}text-white link-hover-gray-extra-light{% endif %}">Ondrej Chum</a> in the <a href="https://cyber.felk.cvut.cz/category/department/cmp/gmatas" class="text-underline {% if site.style == 'dark' %}text-white link-hover-gray-extra-light{% endif %}">Visual Recognition Group</a> of the Faculty of Electrical Engineering, Czech Technical University in Prague.
           I completed my MSc degree in the University of Montenegro.
@@ -60,6 +64,8 @@
         {% include news.html %}
 
         {% include awards.html %}
+
+        {% include talks.html %}
 
         {% if site.topics %}
           {% include interests.html %}
