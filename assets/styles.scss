@@ -58,16 +58,18 @@ html {
 }
 
 .navigation-white ul li a {
-  text-decoration: none; 
+  text-decoration: none;
 }
 
 .navigation-white ul li a:hover,
 .navigation-selected-white {
-  color: #ffffff; 
-  border-bottom-width: 3px; 
-  border-bottom-style: solid; 
+  color: #ffffff;
+  border-bottom-width: 3px;
+  border-bottom-style: solid;
   padding-bottom: 5px;
 }
+
+.text-gray-extra-light{color:#959da5 !important}
 
 @media (min-width: 768px) {
 #masthead {
