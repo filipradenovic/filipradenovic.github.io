@@ -78,6 +78,9 @@ talks:
   - prcvc15
 
 publications:
+  - year: 2020
+    pubs:
+      - grb20
   - year: 2019
     pubs:
       - r19
