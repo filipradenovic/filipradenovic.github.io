@@ -1,3 +1,12 @@
+grb20:
+  id: grb20
+  title: 'Attention-Based Query Expansion Learning'
+  authors: 'Gordo A., <b>Radenović F.</b>, Berg T.'
+  where: 'European Conference on Computer Vision (ECCV) 2020'
+  files:
+    - pdf
+    - bib
+
 r19:
   id: r19
   title: 'Visual Retrieval with Compact Image Representations'
