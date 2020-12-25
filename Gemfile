@@ -1,4 +1,5 @@
 source 'https://rubygems.org'
+gem 'bundler', '2.0.2'
 gem 'jekyll', group: :jekyll_plugins
 
 # GitHub Pages plugins
