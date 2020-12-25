@@ -1,0 +1,16 @@
+name: Build and deploy Jekyll site to GitHub Pages
+
+on:
+  push:
+    branches: [ jekyll ]
+  schedule:
+    - cron:  '0 0 * * *' # run everyday at 00:00
+
+jobs:
+  github-pages:
+    runs-on: ubuntu-16.04
+    steps:
+      - uses: actions/checkout@v2
+      - uses: helaili/jekyll-action@2.0.1
+        env:
+          JEKYLL_PAT: ${{ secrets.GH_PAGES_TOKEN }}
