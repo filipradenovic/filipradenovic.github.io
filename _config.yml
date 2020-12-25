@@ -1,5 +1,7 @@
 repository: filipradenovic/filipradenovic.github.io
 
+github: [metadata]
+
 layout: sidebar # sidebar | stacked
 style: dark # light | dark
 
@@ -149,5 +151,3 @@ social_media_short:
 #   - name: Sass
 #     web_url: https://github.com/topics/sass
 #     image_url: https://raw.githubusercontent.com/github/explore/6c6508f34230f0ac0d49e847a326429eefbfc030/topics/sass/sass.png
-
-github: [metadata]
