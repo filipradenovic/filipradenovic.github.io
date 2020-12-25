@@ -1,7 +1,5 @@
 repository: filipradenovic/filipradenovic.github.io
 
-github: [metadata]
-
 layout: sidebar # sidebar | stacked
 style: dark # light | dark
 
