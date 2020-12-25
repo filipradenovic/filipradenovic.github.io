@@ -1,6 +1,9 @@
 source 'https://rubygems.org'
 gem 'jekyll', group: :jekyll_plugins
 
+# Downgrade faraday from 1.2.0 -> 1.1.0 to make github metadata loading work
+gem 'faraday', '1.1.0' 
+
 # GitHub Pages plugins
 gem "jekyll-github-metadata"
 gem "jekyll-octicons"
